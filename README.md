@@ -1,24 +1,70 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## テーブル設計
 
-Things you may want to cover:
+### users テーブル
 
-* Ruby version
+| Column            | Type   | Options     |
+| ----------------- | ------ | ----------- |
+| email             | string | null: false, unique:true |
+| encrypted_password| string | null: false |
+| nick_name         | string | null: false, unique:true |
 
-* System dependencies
+#### Association
 
-* Configuration
+- has_many :task_group_users
+- has_many :task_groups, through: :task_group_users
 
-* Database creation
+### task-group-users テーブル
 
-* Database initialization
+| Column      | Type       | Options          |
+| ----------- | ---------- | ---------------- |
+| task_group  | references | foreign_key: true|
+| user        | references | foreign_key: true|
 
-* How to run the test suite
+#### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- belongs_to :task-group
+- belongs_to :user
 
-* Deployment instructions
+### task_group テーブル
 
-* ...
+| Column       | Type      | Options          |
+| ------------ | --------- | ---------------- |
+| g_name       | string    | null: false      |
+| g_description| string    | null: false      |
+ 
+
+#### Association
+
+- has_many :task_group_users
+- has_many :users, through: :task_group_users
+- has_many :spaces
+- has_many :tasks
+
+### spaces テーブル
+
+| Column       | Type      | Options     |
+| ------------ | --------- | ----------- |
+| s_name       | string    | null: false, unique:true |
+| s_description| string    | null: false |
+
+#### Association
+
+- belongs_to : task_group
+- has_many   :tasks
+
+### tasks テーブル
+
+| Column         | Type      | Options     |
+| -------------- | --------- | ----------- |
+| content        | string    | null: false |
+| deadline       | datetime  | null: false |
+| status         | boolean   | null: false |
+| space          | references| foreign_key: true|
+| user           | references| foreign_key: true|
+
+#### Association
+
+- belongs_to :task_group
+- belongs_to :space
