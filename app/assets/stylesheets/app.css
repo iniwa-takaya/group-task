@@ -15,14 +15,21 @@
   width: calc(100vw - 60%);
 }
 .app-title-name {
+  text-decoration: none;
+  color: black;
   font-size: 30px;
 }
 .log-menu {
+  display: flex;
+  align-items: center;
   height: 40px;
-  width: 200px;
   margin-right: 10px;
+  padding: 0px 5px;
   border-left: 1px solid gray;
   border-right: 1px solid gray;
+}
+.registraition-menu {
+  margin-left: 10px;
 }
 /* メインコンテンツのCSS */
 .wrapper {
