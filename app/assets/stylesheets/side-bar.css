@@ -20,8 +20,30 @@
   border-radius : 50px;
 }
 .group-menu {
-  height: calc(100vh - 40%);
+  height: calc(100vh - 350px);
   width: 180px;
   background-color: rgb(255, 207, 134);
   border-radius : 10px;
+}
+.group-new-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  height: 50px;
+  width: 150px;
+  border-bottom: 1px solid black;
+}
+.group-index {
+  margin: 10px auto;
+  height: calc(100vh - 420px);
+  width: 170px;
+  background-color: rgb(245, 231, 209);
+  border-radius : 5px;
+}
+.group-index-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }

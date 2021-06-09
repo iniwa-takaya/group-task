@@ -11,6 +11,22 @@
     <% end %>
   </div>
   <div class="group-menu">
-  
+    <% if user_signed_in? %>
+      <div class="group-new-menu">
+        <%= link_to '新規グループの作成', new_task_group_path, class: "group-new-path" %>
+      </div>
+      <div class="group-index">
+        <div class="group-index-title">
+          参加中のグループ一覧
+        </div>
+        <div class="group-index-menu">
+        
+        </div>
+      </div>
+    <% else %>
+      <div class="yet-signed-aleat">
+        <p>グループ機能を使用するには新規登録が必要です</p>   ""
+      </div>
+    <% end %>
   </div>
 </div>
