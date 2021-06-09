@@ -1,6 +1,9 @@
 <div class="side-bar-content">
   <div class="user-menu">
-  
+    <%= link_to user_path(current_user) do %>
+      <div class="user-icon">画像</div>
+      <div class="user-show-path">マイページ</div>
+    <% end %>
   </div>
   <div class="group-menu">
   

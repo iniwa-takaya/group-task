@@ -10,12 +10,18 @@
   border-radius : 10px;
 }
 .user-menu {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
   height: 180px;
   width: 180px;
   background-color: white;
   border-radius : 50px;
 }
-
+.user-icon {
+  text-align: center;
+}
 .group-menu {
   height: calc(100vh - 40%);
   width: 180px;

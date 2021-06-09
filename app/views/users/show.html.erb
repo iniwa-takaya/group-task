@@ -1,0 +1,10 @@
+<div class="mypage">
+  <div class="user-infomaition">
+    <div class="user-name"><%= current_user.nick_name %></div>
+    <div class="user-image">画像</div>
+    <div class="user-mail"><%= current_user.email %></div>
+  </div>
+  <div class="user-edit-menu">
+    <%= link_to 'ユーザー情報を編集する' %>
+  </div>
+</div>
