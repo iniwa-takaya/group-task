@@ -1,12 +1,13 @@
 <div class="mypage">
   <div class="user-infomaition">
     <%= form_with model: current_user, local: true do |f|%>
+      <%= render 'shared/error_form', model: f.object %>
       <div class='user-name'>
         <div class='field-label'>
           <%= f.label :nick_name%>
         </div>
         <div class='field-input'>
-          <%= f.text_field :nick_name, autofocus: true%>
+          <%= f.text_field :nick_name%>
         </div>
       </div>
       <div class='user-mail'>
