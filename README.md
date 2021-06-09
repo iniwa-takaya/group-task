@@ -15,7 +15,7 @@
 - has_many :task_group_users
 - has_many :task_groups, through: :task_group_users
 
-### task-group-users テーブル
+### task_group_users テーブル
 
 | Column      | Type       | Options          |
 | ----------- | ---------- | ---------------- |
@@ -24,10 +24,10 @@
 
 #### Association
 
-- belongs_to :task-group
+- belongs_to :task_group
 - belongs_to :user
 
-### task_group テーブル
+### task_groups テーブル
 
 | Column       | Type      | Options          |
 | ------------ | --------- | ---------------- |
