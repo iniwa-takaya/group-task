@@ -1,7 +1,7 @@
 <div class="side-bar-content">
   <div class="user-menu">
     <% if user_signed_in? %>
-      <%= link_to user_path(current_user) do %>
+      <%= link_to user_path(current_user), class: "user-menu" do %>
         <div class="user-icon">画像</div>
         <div class="user-show-path">マイページ</div>
       <% end %>
