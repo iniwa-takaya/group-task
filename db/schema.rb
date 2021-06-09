@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_09_061432) do
+ActiveRecord::Schema.define(version: 2021_06_09_124748) do
+
+  create_table "task_group_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "task_group_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["task_group_id"], name: "index_task_group_users_on_task_group_id"
+    t.index ["user_id"], name: "index_task_group_users_on_user_id"
+  end
+
+  create_table "task_groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "g_name", null: false
+    t.string "g_discription"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -25,4 +41,6 @@ ActiveRecord::Schema.define(version: 2021_06_09_061432) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "task_group_users", "task_groups"
+  add_foreign_key "task_group_users", "users"
 end

@@ -32,7 +32,7 @@
 | Column       | Type      | Options          |
 | ------------ | --------- | ---------------- |
 | g_name       | string    | null: false      |
-| g_description| string    | null: false      |
+| g_description| string    |                  |
  
 
 #### Association
