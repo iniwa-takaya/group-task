@@ -14,6 +14,9 @@ spaces機能のindexfile
           <%= users.nick_name %>
         </div>
       <% end %>
+    <div class="group-info-edit">
+      <%= link_to 'グループを削除する', task_group_path(@task_group), method: :delete, class: "group-info-delete" %>
+    </div>
     </div>
   </div>
   <%# スペースを新規作成するフォームの表示 %>

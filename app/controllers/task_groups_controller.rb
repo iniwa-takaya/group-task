@@ -16,6 +16,13 @@ class TaskGroupsController < ApplicationController
     end
   end
 
+  def destroy
+    @task_group = TaskGroup.find(params[:id])
+    binding.pry
+    @task_group.destroy
+    redirect_to root_path
+  end
+
   private
 
   def task_group_params
