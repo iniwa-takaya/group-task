@@ -1,1 +1,29 @@
 spaces機能のeditfile
+  <%# スペースを新規作成するフォームの表示 %>
+<div class="space-edit">
+    <div class="space-edit-title">
+      <%= "「#{@space.s_name}」 情報変更ページ" %>
+    </div>
+    <div class="space-new-form">
+      <%= form_with model: [@task_group, @space], url:task_group_space_path(@task_group, @space), local: true do |f| %>
+        <%= render 'shared/error_form', model: f.object %>
+        <div class="space-form-field">
+          <div>
+            <%= f.label :スペース名 %>
+          </div>
+          <div>
+            <%= f.text_field :s_name %>
+          </div>
+          <div>
+            <%= f.label :スペースの説明（任意） %>
+          </div>
+          <div>
+            <%= f.text_area :s_description %>
+          </div>
+          <div class="space-submit">
+            <%= f.submit "スペースの情報を編集する" ,class: 'space-submit-btn' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>
