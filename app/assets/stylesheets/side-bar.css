@@ -38,7 +38,7 @@
   margin: 10px auto;
   height: calc(100vh - 420px);
   width: 170px;
-  background-color: rgb(245, 231, 209);
+  background-color: rgb(243, 227, 200);
   border-radius : 5px;
 }
 .group-index-title {
@@ -46,4 +46,23 @@
   justify-content: center;
   align-items: center;
   height: 50px;
+}
+.group-index-menu {
+  height: calc(100vh - 420px - 50px);
+  overflow: scroll;
+}
+.group-index-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 40px;
+  width: 150px;
+  border-bottom: 1px solid white;
+}
+.group-index-content:hover {
+  background-color: rgb(212, 194, 194);
+}
+.group-index-content-link {
+  color: white;
 }

@@ -20,7 +20,11 @@
           参加中のグループ一覧
         </div>
         <div class="group-index-menu">
-        
+          <% current_user.task_groups.each do |group| %>
+            <div class="group-index-content">
+              <%= link_to group.g_name, "#", class: "group-index-content-link" %>
+            </div>
+          <% end %>
         </div>
       </div>
     <% else %>
