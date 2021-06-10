@@ -1,1 +1,28 @@
-スペーシーズインデックス
+spaces機能のindexfile
+<div class="space-contents">
+  <div class="group-info">
+    <div class="group-info-name">
+      <%= "現在参加中のグループは「#{@task_group.g_name}」です" %>
+    </div>
+    <div class="group-info-member">
+      <% @task_group.users.each do |users| %>
+        <div class="member-name">
+          <%= users.nick_name %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="space-new">
+    <div class="space-new-title">
+      
+    </div>
+    <div class="space-new-form">
+    
+    </div>
+  </div>
+  <div class="space-index">
+    <div class="sapce-index-content">
+    
+    </div>
+  </div>
+</div>

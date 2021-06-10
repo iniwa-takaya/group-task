@@ -11,6 +11,7 @@
     <% end %>
   </div>
   <div class="group-menu">
+    <%# ユーザーが登録済みの場合の表示 %>
     <% if user_signed_in? %>
       <div class="group-new-menu">
         <%= link_to '新規グループの作成', new_task_group_path, class: "group-new-path" %>
@@ -27,6 +28,7 @@
           <% end %>
         </div>
       </div>
+    <%# ユーザーが未登録の場合の表示 %>
     <% else %>
       <div class="yet-signed-aleat">
         <p>グループ機能を使用</p>
