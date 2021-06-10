@@ -1,6 +1,7 @@
 task_groupsのnewfile
 <div class="group-form">
   <%= form_with model: @task_group, local: true do |f| %>
+    <%= render 'shared/error_form', model: f.object %>
     <div class="task-group-form-field">
       <div>
         <%= f.label :グループ名 %>
