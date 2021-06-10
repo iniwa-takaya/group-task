@@ -53,6 +53,8 @@ spaces機能のindexfile
       <% @task_group.spaces.each do |space| %>
         <div class="space-name">
           <%= link_to space.s_name, "#",class: "space-name-path" %>
+          <%= link_to '編集', edit_task_group_space_path(@task_group, space) %>
+          <%= link_to '削除', '#' %>
         </div>
       <% end %>
     </div>
