@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_09_124748) do
+ActiveRecord::Schema.define(version: 2021_06_10_081832) do
+
+  create_table "spaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "s_name", null: false
+    t.string "s_description"
+    t.bigint "task_group_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["task_group_id"], name: "index_spaces_on_task_group_id"
+  end
 
   create_table "task_group_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -41,6 +50,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_124748) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "spaces", "task_groups"
   add_foreign_key "task_group_users", "task_groups"
   add_foreign_key "task_group_users", "users"
 end

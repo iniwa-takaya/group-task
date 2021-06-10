@@ -46,7 +46,8 @@
 | Column       | Type      | Options     |
 | ------------ | --------- | ----------- |
 | s_name       | string    | null: false, unique:true |
-| s_description| string    | null: false |
+| s_description| string    |             |
+| task_group   |references | foreign_key: true|
 
 #### Association
 
@@ -61,7 +62,7 @@
 | deadline       | datetime  | null: false |
 | status         | boolean   | null: false |
 | space          | references| foreign_key: true|
-| user           | references| foreign_key: true|
+| task_group     | references| foreign_key: true|
 
 #### Association
 
