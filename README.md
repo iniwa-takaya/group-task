@@ -33,7 +33,6 @@
 | ------------ | --------- | ---------------- |
 | g_name       | string    | null: false      |
 | g_description| string    |                  |
- 
 
 #### Association
 

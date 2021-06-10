@@ -25,7 +25,10 @@
       </div>
     <% else %>
       <div class="yet-signed-aleat">
-        <p>グループ機能を使用するには新規登録が必要です</p>   ""
+        <p>グループ機能を使用</p>
+        <p>するには新規登録が</p>
+        <p>必要です</p>
+        <%= link_to 'ユーザーを新規登録', new_user_registration_path, class: "registraition-menu" %>
       </div>
     <% end %>
   </div>

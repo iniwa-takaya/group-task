@@ -1,1 +1,25 @@
 グループの新規作成
+<div class="group-form">
+  <%= form_with model: @task_group, local: true do |f| %>
+    <div class="task-group-form-field">
+      <div>
+        <%= f.label :グループ名 %>
+      </div>
+      <div>
+        <%= f.text_field :g_name, placeholder: 'グループ名を入力してください' %>
+      </div>
+      <div>
+        <%= f.label :グループの説明 %>
+      </div>
+      <div>
+        <%= f.text_area :g_description, placeholder: 'グループの説明を入力してください' %>
+      </div>
+      <div class="task-group-member-field">
+        <%= f.collection_check_boxes :user_ids, User.all, :id, :nick_name %>
+      </div>
+      <div class="task-group-submit">
+        <%= f.submit "作成する" ,class: 'task-group-submit-btn' %>
+      </div>
+    </div>
+  <% end %>
+</div>

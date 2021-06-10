@@ -7,4 +7,7 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :nick_name, uniqueness: true
   end
+
+  has_many :task_group_users
+  has_many :task_groups, through: :task_group_users
 end
