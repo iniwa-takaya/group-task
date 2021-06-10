@@ -56,7 +56,7 @@ spaces機能のindexfile
     <div class="sapce-index-content">
       <% @task_group.spaces.each do |space| %>
         <div class="space-name">
-          <%= link_to space.s_name, "#",class: "space-name-path" %>
+          <%= link_to space.s_name, task_group_space_tasks_path(@task_group, space),class: "space-name-path" %>
           <%= link_to '編集', edit_task_group_space_path(@task_group, space) %>
           <%= link_to '削除', task_group_space_path(@task_group, space), method: :delete,
               data: { confirm: 'スペースを削除すると、スペース内のタスクも同時に削除されます' }, class:"space-destroy" %>
