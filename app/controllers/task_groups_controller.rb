@@ -1,13 +1,12 @@
 class TaskGroupsController < ApplicationController
-  
   def index
   end
-  
+
   def new
     @task_group = TaskGroup.new
     @task_group.users << current_user
   end
-  
+
   def create
     @task_group = TaskGroup.new(task_group_params)
     if @task_group.save
