@@ -1,6 +1,6 @@
 class SpacesController < ApplicationController
-  before_action :find_task_group, only: %i[index create edit update] 
-  before_action :find_space, only: %i[edit update] 
+  before_action :find_task_group, only: %i[index create edit update destroy] 
+  before_action :find_space, only: %i[edit update destroy] 
   
   def index
     @space = Space.new
@@ -22,13 +22,17 @@ class SpacesController < ApplicationController
   end
 
   def update
-    binding.pry
     if @space.update(space_params)
       redirect_to task_group_spaces_path(@task_group)
     else
       @spaces = @task_group.spaces.includes(:task_group)
       render :edit
     end
+  end
+
+  def destroy
+    @space.destroy
+    redirect_to task_group_spaces_path(@task_group)
   end
 
   private

@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: "task_groups#index"
   resources :users, only: %i[show edit update]
   resources :task_groups, only: %i[new create] do
-    resources :spaces, only: %i[index create edit update]
+    resources :spaces, only: %i[index create edit update destroy]
   end
 end
