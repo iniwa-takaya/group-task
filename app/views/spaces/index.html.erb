@@ -1,8 +1,12 @@
 spaces機能のindexfile
 <div class="space-contents">
-  <div class="group-info">
+  <%# グループに関する情報の表示 %>
+  <div class="groups-info">
     <div class="group-info-name">
       <%= "現在参加中のグループは「#{@task_group.g_name}」です" %>
+    </div>
+    <div class="group-info-description">
+      <%= "「#{@task_group.g_description}」" %>
     </div>
     <div class="group-info-member">
       <% @task_group.users.each do |users| %>
@@ -12,6 +16,7 @@ spaces機能のindexfile
       <% end %>
     </div>
   </div>
+  <%# スペースを新規作成するフォームの表示 %>
   <div class="space-new">
     <div class="space-new-title">
       スペース作成フォーム
@@ -39,9 +44,17 @@ spaces機能のindexfile
       <% end %>
     </div>
   </div>
+  <%# グループ内で作成したスペースの表示 %>
   <div class="space-index">
+    <div class="space-index-title">
+      現在作業中のスペース一覧
+    </div>
     <div class="sapce-index-content">
-    
+      <% @task_group.spaces.each do |space| %>
+        <div class="space-name">
+          <%= link_to space.s_name, "#",class: "space-name-path" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
