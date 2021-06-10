@@ -51,7 +51,7 @@
 
 #### Association
 
-- belongs_to : task_group
+- belongs_to :task_group
 - has_many   :tasks
 
 ### tasks テーブル

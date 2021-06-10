@@ -14,10 +14,29 @@ spaces機能のindexfile
   </div>
   <div class="space-new">
     <div class="space-new-title">
-      
+      スペース作成フォーム
     </div>
     <div class="space-new-form">
-    
+      <%= form_with model: [@task_group, @space], local: true do |f| %>
+        <%= render 'shared/error_form', model: f.object %>
+        <div class="space-form-field">
+          <div class="space-submit">
+            <%= f.submit "作業スペースを作成する" ,class: 'space-submit-btn' %>
+          </div>
+          <div>
+            <%= f.label :スペース名 %>
+          </div>
+          <div>
+            <%= f.text_field :s_name, placeholder: 'スペース名を入力してください' %>
+          </div>
+          <div>
+            <%= f.label :スペースの説明（任意） %>
+          </div>
+          <div>
+            <%= f.text_area :s_description, placeholder: 'スペースの説明を入力してください' %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
   <div class="space-index">
