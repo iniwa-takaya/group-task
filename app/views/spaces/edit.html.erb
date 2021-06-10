@@ -2,7 +2,7 @@ spaces機能のeditfile
   <%# スペースを新規作成するフォームの表示 %>
 <div class="space-edit">
     <div class="space-edit-title">
-      <%= "「#{@space.s_name}」 情報変更ページ" %>
+      <%= "#{@space.s_name} 情報変更ページ" %>
     </div>
     <div class="space-new-form">
       <%= form_with model: [@task_group, @space], url:task_group_space_path(@task_group, @space), local: true do |f| %>

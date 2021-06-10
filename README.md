@@ -45,7 +45,7 @@
 
 | Column       | Type      | Options     |
 | ------------ | --------- | ----------- |
-| s_name       | string    | null: false, unique:true |
+| s_name       | string    | null: false |
 | s_description| string    |             |
 | task_group   |references | foreign_key: true|
 
