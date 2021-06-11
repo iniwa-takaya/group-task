@@ -19,7 +19,7 @@
               <%= link_to "編集", edit_task_group_space_task_path(@task_group, @space, task),class: "task-edit-path" %>
             </div>
             <div class="task-index-content-status">
-              <%= button_to "未完了", task_group_space_task_path(@task_group, @space, task, task: {status: true}), method: :put, class: "task-index-content-btn" %>
+              <%= button_to "未完了", task_group_space_task_path(@task_group, @space, task, task: {content: task.content, status: true}), method: :put, class: "task-index-content-btn" %>
             </div>
             <div class="task-index-content-index">
               <div class="task-index-content-content"><%= task.content %></div>
@@ -39,7 +39,7 @@
               <%= link_to "削除", task_group_space_task_path(@task_group, @space, task), method: :delete, class: "task-edit-path" %>
             </div>
             <div class="task-index-content-status">
-              <%= button_to "完了", task_group_space_task_path(@task_group, @space, task, task: {status: false}), method: :put, class: "task-index-content-done-btn" %>
+              <%= button_to "完了", task_group_space_task_path(@task_group, @space, task, task: {content: task.content, status: false}), method: :put, class: "task-index-content-done-btn" %>
             </div>
             <div class="task-index-content-index">
               <div class="task-index-content-content"><%= task.content %></div>
