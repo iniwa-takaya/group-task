@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_10_081832) do
+ActiveRecord::Schema.define(version: 2021_06_11_021101) do
 
   create_table "spaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "s_name", null: false
@@ -37,6 +37,18 @@ ActiveRecord::Schema.define(version: 2021_06_10_081832) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "content", null: false
+    t.timestamp "deadline"
+    t.boolean "status", default: false, null: false
+    t.bigint "task_group_id"
+    t.bigint "space_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["space_id"], name: "index_tasks_on_space_id"
+    t.index ["task_group_id"], name: "index_tasks_on_task_group_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -53,4 +65,6 @@ ActiveRecord::Schema.define(version: 2021_06_10_081832) do
   add_foreign_key "spaces", "task_groups"
   add_foreign_key "task_group_users", "task_groups"
   add_foreign_key "task_group_users", "users"
+  add_foreign_key "tasks", "spaces"
+  add_foreign_key "tasks", "task_groups"
 end
