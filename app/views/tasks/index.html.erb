@@ -1,44 +1,77 @@
-tasks機能のindexfile
-<div class="task-contents">
-  <%# スペースの情報を表示 %>
-  <div class="space-info">
-    <div class="task-info-title">
-      <%= @space.s_name %>
-    </div>
+<%# スペースの情報を表示 %>
+<div class="space-info">
+  <div class="space-info-title">現在選択中の作業スペース</div>
+  <div class="space-info-index">
+    <div class="space-info-index-title"><%= "名前: #{@space.s_name}" %></div>
+    <div class="space-info-index-description"><%= "説明: #{@space.s_description}" %></div>
   </div>
-  <div class="tasks-index">
+</div>
+<%# タスクの表示 %>
+<div class="tasks-index">
+  <div class="tasks-index-contents">
+    <%# 未完了のタスクを表示 %>
     <div class="task-index-contents">
-      <%# 未完了のタスクを表示 %>
-      <div class="task-index-content">
-        <% @space.tasks.each do |task| %>
-          <div class="task-index-content-status"><%= task.status %></div>
-          <div class="task-index-content-deadline"><%= task.deadline %></div>
-          <div class="task-index-content-content"><%= task.content %></div>
+    <div class="task-index-contents-title">進行中</div>
+      <% @space.tasks.each do |task| %>
+        <% unless task.status %>
+          <div class="task-index-content">
+            <div class="task-edit">
+              <%= link_to "編集", edit_task_group_space_task_path(@task_group, @space, task),class: "task-edit-path" %>
+            </div>
+            <div class="task-index-content-status">
+              <%= button_to "未完了", { method: :patch, params: {status: 1} }, class: "task-index-content-btn" %>
+            </div>
+            <div class="task-index-content-index">
+              <div class="task-index-content-content"><%= task.content %></div>
+              <div class="task-index-content-deadline"><%= "~ #{task.deadline}" %></div>
+            </div>
+          </div>
         <% end %>
-      </div>
-      <%# 完了済のタスクを表示 %>
-      <div class="task-index-content-done">
-      </div>
+      <% end %>
     </div>
-  </div>
-  <%# 新規のタスクを作成するフォーム %>
-  <div class="task-new">
-    <div class="task-form">
-      <%= form_with model: [@task_group, @space, @task], class: 'form', local: true do |f| %>
-        <%= render 'shared/error_form', model: f.object %>
-        <div class="form-parts">
-          <%= f.text_field :content, class: "from-task-content" %>
-        </div>
-        <div class="form-parts">
-          <%= f.datetime_field :deadline, class: "form-task-deadline" %>
-        </div>
-        <div class="form-parts">
-          <%= f.hidden_field :status %>
-        </div>
-        <div class="form-parts">
-          <%= f.submit '新規作成', class: "form-task-submit" %>
-        </div>
+    <%# 完了済のタスクを表示 %>
+    <div class="task-index-contents-done">
+      <div class="task-index-contents-title">完了済</div>
+      <% @space.tasks.each do |task| %>
+        <% if task.status %>
+          <div class="task-index-content">
+            <div class="task-edit">
+              <%= link_to "削除", "#",class: "task-edit-path" %>
+            </div>
+            <div class="task-index-content-status">
+              <%= button_to "未完了", { method: :patch, params: {status: 1} }, class: "task-index-content-btn" %>
+            </div>
+            <div class="task-index-content-index">
+              <div class="task-index-content-content"><%= task.content %></div>
+              <div class="task-index-content-deadline"><%= "~ #{task.deadline}" %></div>
+            </div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
+</div>
+<%# 新規のタスクを作成するフォーム %>
+<div class="task-new">
+  <%= form_with model: [@task_group, @space, @task], class: 'form', local: true do |f| %>
+    <%= render 'shared/error_form', model: f.object %>
+    <div class="form-parts">
+      <div class="form-part-name">作業内容</div>
+      <div class="form-part-content">
+        <%= f.text_field :content, class: "task-new-form-content" %>
+      </div>
+    </div>
+    <div class="form-parts">
+      <div class="form-part-name">期限</div>
+      <div class="form-part">
+        <%= f.datetime_field :deadline, class: "task-new-form-deadline" %>
+      </div>
+      <div class="form-part">
+        <%= f.hidden_field :status %>
+      </div>
+      <div class="form-part-btn">
+        <%= f.submit '保存', class: "task-new-form-submit" %>
+      </div>
+    </div>
+  <% end %>
 </div>

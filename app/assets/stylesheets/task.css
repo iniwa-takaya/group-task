@@ -1,0 +1,116 @@
+/* スペースの情報を表示 */
+.space-info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+.space-info-title {
+  padding: 10px 0px 0px 0px;
+}
+.space-info-index {
+  width: 80%;
+  justify-content: space-around;
+  border: 1px solid black;
+  padding: 5px 8px 5px 8px;
+  overflow: scroll;
+}
+.space-info-index-title {
+
+}
+/* 未完了のタスクの表示 */
+.tasks-index {
+  height: calc(100vh - 100px - 100px - 100px);
+  width: calc(100vw - 550px);
+  margin: 10px 15px 10px 15px;
+  padding: 0px 10px;
+  border: 1px solid rgb(226, 245, 245);
+  border-radius: 5px;
+}
+.task-index-contents {
+  height: 70%;
+  width: 100%;
+}
+.task-index-contents-title {
+  margin-top: 10px;
+  text-align: center;
+}
+.task-index-content {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 5px;
+}
+.task-edit {
+  width: 60px;
+}
+.task-index-content-status {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task-index-content-btn {
+  display: block;
+  margin: 5px 20px 5px 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  color: white;
+  background-color: white;
+  border: 1px solid rgb(163, 163, 163);
+  cursor: pointer;
+}
+.task-index-content-btn:hover {
+  color: rgb(243, 242, 242);
+  background-color: rgb(243, 242, 242);
+  border: 1px solid rgb(243, 242, 242);
+}
+.task-index-content-deadline {
+  font-size: 12px;
+}
+/* 完了済のタスクの表示 */
+.task-index-contents-done {
+  height: 30%;
+  width: 100%;
+  border-top: 1px solid black;
+}
+/* 新規のタスクを作成するフォーム */
+.task-new {
+  display: flex;
+  align-items: center;
+  background-color: cornsilk;
+  height: 100px;
+  width: calc(100vw - 500px);
+}
+.form-parts {
+  display: flex;
+  align-items: center;
+  margin: 5px 20px 5px 10px;
+}
+.form-part-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+}
+.form-part-content {
+  width: calc(100vw - 620px);
+}
+.task-new-form-content {
+  width: 100%;
+}
+.form-part-btn {
+  margin-left: 10px;
+}
+.task-new-form-submit {
+  width: 50px;
+  color: black;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.task-new-form-submit:hover {
+  color: white;
+  background-color: gray;
+}
