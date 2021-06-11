@@ -26,8 +26,9 @@
   border-radius: 5px;
 }
 .task-index-contents {
-  height: 70%;
+  height: calc(100vh - 100px - 100px - 100px - 200px);
   width: 100%;
+  overflow: scroll;
 }
 .task-index-contents-title {
   margin-top: 10px;
@@ -69,9 +70,10 @@
 }
 /* 完了済のタスクの表示 */
 .task-index-contents-done {
-  height: 30%;
+  height: 200px;
   width: 100%;
   border-top: 1px solid black;
+  overflow: scroll;
 }
 .task-index-content-done-btn {
   display: block;

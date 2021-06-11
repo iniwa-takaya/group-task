@@ -36,7 +36,7 @@
         <% if task.status %>
           <div class="task-index-content">
             <div class="task-edit">
-              <%= link_to "削除", "#",class: "task-edit-path" %>
+              <%= link_to "削除", task_group_space_task_path(@task_group, @space, task), method: :delete, class: "task-edit-path" %>
             </div>
             <div class="task-index-content-status">
               <%= button_to "完了", task_group_space_task_path(@task_group, @space, task, task: {status: false}), method: :put, class: "task-index-content-done-btn" %>

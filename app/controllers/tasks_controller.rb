@@ -37,6 +37,14 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    @task_group = TaskGroup.find(params[:task_group_id])
+    @space = @task_group.spaces.find(params[:space_id])
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to task_group_space_tasks_path(@task_group, @space)
+  end
+
   private
 
   def task_params
