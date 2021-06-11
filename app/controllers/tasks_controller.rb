@@ -14,7 +14,26 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to task_group_space_tasks_path(@task_group, @space)
     else
+      @tasks = @space.tasks.includes(task_group: :space)
       render :index
+    end
+  end
+
+  def edit
+    @task_group = TaskGroup.find(params[:task_group_id])
+    @space = @task_group.spaces.find(params[:space_id])
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @task_group = TaskGroup.find(params[:task_group_id])
+    @space = @task_group.spaces.find(params[:space_id])
+    @task = Task.find(params[:id])
+    if @task.update(task_params)
+      redirect_to task_group_space_tasks_path(@task_group, @space)
+    else
+      @tasks = @space.tasks.includes(task_group: :space)
+      render :edit
     end
   end
 

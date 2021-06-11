@@ -6,7 +6,7 @@ spaces機能のeditfile
     <div class="space-new-form">
       <%= form_with model: [@task_group, @space], url:task_group_space_path(@task_group, @space), local: true do |f| %>
         <%= render 'shared/error_form', model: f.object %>
-        <div class="space-form-field">
+        <div class="space-form-btn-field">
           <div>
             <%= f.label :スペース名 %>
           </div>

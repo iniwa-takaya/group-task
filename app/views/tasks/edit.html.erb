@@ -1,1 +1,27 @@
 tasks機能のeditfile
+<div class="edit-form">
+  <div class="edit-form-title">
+    <%= "タスク情報変更ページ" %>
+  </div>
+  <%= form_with model: [@task_group, @space, @task], url:task_group_space_task_path(@task_group, @space, @task), local: true do |f| %>
+    <%= render 'shared/error_form', model: f.object %>
+      <div class="edit-form-btn">
+        <%= f.submit '編集する', class: "form-btn-field" %>
+      </div>
+    <div class="edit-form-parts">
+      <div class="edit-form-name">作業内容</div>
+      <div class="edit-form-content">
+        <%= f.text_field :content, class: "task-new-form-content" %>
+      </div>
+    </div>
+    <div class="editform-parts">
+      <div class="edit-form-part-name">期限</div>
+      <div class="edit-form-part">
+        <%= f.datetime_field :deadline, class: "task-new-form-deadline" %>
+      </div>
+      <div class="edit-form-part">
+        <%= f.hidden_field :status %>
+      </div>
+    </div>
+  <% end %>
+</div>
