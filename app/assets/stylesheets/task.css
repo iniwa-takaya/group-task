@@ -16,9 +16,6 @@
   padding: 5px 8px 5px 8px;
   overflow: scroll;
 }
-.space-info-index-title {
-
-}
 /* 未完了のタスクの表示 */
 .tasks-index {
   height: calc(100vh - 100px - 100px - 100px);
@@ -75,6 +72,22 @@
   height: 30%;
   width: 100%;
   border-top: 1px solid black;
+}
+.task-index-content-done-btn {
+  display: block;
+  margin: 5px 20px 5px 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  color: black;
+  background-color: black;
+  border: 1px solid black(163, 163, 163);
+  cursor: pointer;
+}
+.task-index-content-done-btn:hover {
+  color: rgb(243, 242, 242);
+  background-color: rgb(243, 242, 242);
+  border: 1px solid rgb(243, 242, 242);
 }
 /* 新規のタスクを作成するフォーム */
 .task-new {
