@@ -11,7 +11,11 @@ spaces機能のindexfile
     <div class="group-info-member">
       <% @task_group.users.each do |users| %>
         <div class="member-name">
-          <%= image_tag users.image.variant(resize: '30x30'), class: 'user-image' if users.image.attached? %>
+          <% if users.image.attached? %>
+            <%= image_tag users.image.variant(resize: '30x30'), class: 'user-image' %>
+          <% else %>
+            <%= image_tag 'no-image.jpg', size: '30x30', class: 'user-image' %>
+          <% end %>
           <%= users.nick_name %>
         </div>
       <% end %>

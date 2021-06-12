@@ -3,7 +3,11 @@
     <% if user_signed_in? %>
       <%= link_to user_path(current_user), class: "user-menu-content" do %>
         <div class="user-icon">
-          <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-image' if current_user.image.attached? %>
+          <% if current_user.image.attached? %>
+            <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-image' %>
+          <% else %>
+            <%= image_tag 'no-image.jpg', size: '100x100', class: 'user-image' %>
+          <% end %>
         </div>
         <div class="user-show-path">マイページ</div>
       <% end %>

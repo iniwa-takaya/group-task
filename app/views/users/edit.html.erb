@@ -19,6 +19,10 @@ users機能のeditfile
         <div class='field-input'>
           <%= f.email_field :email%>
         </div>
+        <div class="field">
+          <%= f.label :アイコン %>
+          <%= f.file_field :image, class:"input-default" %>
+        </div>
       </div>
       <div class='actions'>
         <%= f.submit "情報を更新する", class: 'btn'%>
