@@ -10,4 +10,5 @@ class User < ApplicationRecord
 
   has_many :task_group_users
   has_many :task_groups, through: :task_group_users
+  has_one_attached :image
 end

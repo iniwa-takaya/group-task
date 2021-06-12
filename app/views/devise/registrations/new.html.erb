@@ -24,6 +24,11 @@
     <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
   </div>
 
+  <div class="field">
+    <%= f.label :アイコン %>
+    <%= f.file_field :image, class:"input-default" %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
