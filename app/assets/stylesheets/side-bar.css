@@ -9,16 +9,30 @@
   margin: 5px auto;
   border-radius : 10px;
 }
+/* ユーザーの情報 */
 .user-menu {
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
   height: 180px;
   width: 180px;
   background-color: white;
   border-radius : 50px;
 }
+.user-icon {
+  text-align: center;
+  height: 120px;
+  width: 120px;
+}
+.user-image {
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 50px;
+}
+.user-show-path{
+  text-align: center;
+}
+/* グループの情報 */
 .group-menu {
   height: calc(100vh - 350px);
   width: 180px;
