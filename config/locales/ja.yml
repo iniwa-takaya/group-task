@@ -10,3 +10,6 @@ ja:
       task:
         content: タスクの内容
         status: タスクの条件
+  time:
+    formats:
+      default: "%m/%d %H:%M"
