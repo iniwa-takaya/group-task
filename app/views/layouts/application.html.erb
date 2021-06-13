@@ -10,15 +10,10 @@
   </head>
 
   <body>
-    <div class="header"><%= render 'shared/header' %></div>
-    <div class="wrapper">
-      <div class="side-bar">
-        <%= render 'shared/side_bar' %>
-      </div>
-      <div class="main-window">
-        <%= yield %>
-      </div>
+    <div class="header">
+      <%= render 'shared/header' %>
     </div>
+    <%= yield %>
     <div class="footer">app-discreption</div>
   </body>
 </html>

@@ -1,18 +1,25 @@
-users機能のshowfile
-<div class="mypage">
-  <div class="back-btn"><%= link_to '戻る',root_path %></div>
-  <div class="user-infomaition">
-    <div class="user-show-name"><%= current_user.nick_name %></div>
-    <div class="user-show-image">
-      <% if current_user.image.attached? %>
-        <%= image_tag current_user.image.variant(resize: '320x180'), class: 'user-show-image' %>
-      <% else %>
-        <%= image_tag 'no-image.jpg', size: '320x180', class: 'user-show-image' %>
-      <% end %>
-    </div>
-    <div class="user-mail"><%= current_user.email %></div>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render 'shared/side_bar' %>
   </div>
-  <div class="user-edit-menu">
-    <%= link_to 'ユーザー情報を編集する', edit_user_path(current_user) %>
+  <div class="main-window">
+  users機能のshowfile
+    <div class="mypage">
+      <div class="back-btn"><%= link_to '戻る',root_path %></div>
+      <div class="user-infomaition">
+        <div class="user-show-name"><%= current_user.nick_name %></div>
+        <div class="user-show-image">
+          <% if current_user.image.attached? %>
+            <%= image_tag current_user.image.variant(resize: '320x180'), class: 'user-show-image' %>
+          <% else %>
+            <%= image_tag 'no-image.jpg', size: '320x180', class: 'user-show-image' %>
+          <% end %>
+        </div>
+        <div class="user-mail"><%= current_user.email %></div>
+      </div>
+      <div class="user-edit-menu">
+        <%= link_to 'ユーザー情報を編集する', edit_user_path(current_user) %>
+      </div>
+    </div>
   </div>
 </div>

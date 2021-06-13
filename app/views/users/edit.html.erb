@@ -1,32 +1,39 @@
-users機能のeditfile
-<div class="mypage">
-  <div class="back-btn"><%= link_to '戻る', user_path(current_user) %></div>
-  <div class="user-infomaition">
-    <%= form_with model: current_user, local: true do |f|%>
-      <%= render 'shared/error_form', model: f.object %>
-      <div class='user-name'>
-        <div class='field-label'>
-          <%= f.label :nick_name%>
-        </div>
-        <div class='field-input'>
-          <%= f.text_field :nick_name, autofocus: true%>
-        </div>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render 'shared/side_bar' %>
+  </div>
+  <div class="main-window">
+  users機能のeditfile
+    <div class="mypage">
+      <div class="back-btn"><%= link_to '戻る', user_path(current_user) %></div>
+      <div class="user-infomaition">
+        <%= form_with model: current_user, local: true do |f|%>
+          <%= render 'shared/error_form', model: f.object %>
+          <div class='user-name'>
+            <div class='field-label'>
+              <%= f.label :nick_name%>
+            </div>
+            <div class='field-input'>
+              <%= f.text_field :nick_name, autofocus: true%>
+            </div>
+          </div>
+          <div class='user-mail'>
+            <div class='field-label'>
+              <%= f.label :email%>
+            </div>
+            <div class='field-input'>
+              <%= f.email_field :email%>
+            </div>
+            <div class="field">
+              <%= f.label :アイコン %>
+              <%= f.file_field :image, class:"input-default" %>
+            </div>
+          </div>
+          <div class='actions'>
+            <%= f.submit "情報を更新する", class: 'btn'%>
+          </div>
+        <% end %>
       </div>
-      <div class='user-mail'>
-        <div class='field-label'>
-          <%= f.label :email%>
-        </div>
-        <div class='field-input'>
-          <%= f.email_field :email%>
-        </div>
-        <div class="field">
-          <%= f.label :アイコン %>
-          <%= f.file_field :image, class:"input-default" %>
-        </div>
-      </div>
-      <div class='actions'>
-        <%= f.submit "情報を更新する", class: 'btn'%>
-      </div>
-    <% end %>
+    </div>
   </div>
 </div>

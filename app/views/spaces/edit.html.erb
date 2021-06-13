@@ -1,28 +1,35 @@
-spaces機能のeditfile
-<div class="edit-form">
-    <div class="edit-form-title">
-      <%= "#{@space.s_name} 情報変更ページ" %>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render 'shared/side_bar' %>
+  </div>
+  <div class="main-window">
+  spaces機能のeditfile
+    <div class="edit-form">
+      <div class="edit-form-title">
+        <%= "#{@space.s_name} 情報変更ページ" %>
+      </div>
+      <div class="space-new-form">
+        <%= form_with model: [@task_group, @space], url:task_group_space_path(@task_group, @space), local: true do |f| %>
+          <%= render 'shared/error_form', model: f.object %>
+          <div class="space-form-btn-field">
+            <div>
+              <%= f.label :スペース名 %>
+            </div>
+            <div>
+              <%= f.text_field :s_name %>
+            </div>
+            <div>
+              <%= f.label :スペースの説明（任意） %>
+            </div>
+            <div>
+              <%= f.text_area :s_description %>
+            </div>
+            <div class="space-submit">
+              <%= f.submit "スペースの情報を編集する" ,class: 'space-submit-btn' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <div class="space-new-form">
-      <%= form_with model: [@task_group, @space], url:task_group_space_path(@task_group, @space), local: true do |f| %>
-        <%= render 'shared/error_form', model: f.object %>
-        <div class="space-form-btn-field">
-          <div>
-            <%= f.label :スペース名 %>
-          </div>
-          <div>
-            <%= f.text_field :s_name %>
-          </div>
-          <div>
-            <%= f.label :スペースの説明（任意） %>
-          </div>
-          <div>
-            <%= f.text_area :s_description %>
-          </div>
-          <div class="space-submit">
-            <%= f.submit "スペースの情報を編集する" ,class: 'space-submit-btn' %>
-          </div>
-        </div>
-      <% end %>
-    </div>
+  </div>
 </div>

@@ -1,1 +1,14 @@
-task_groups機能のindexfile
+<% if user_signed_in? %>
+  <div class="wrapper">
+    <div class="side-bar">
+      <%= render 'shared/side_bar' %>
+    </div>
+    <div class="main-window">
+      task_groups機能のindexfile
+    </div>
+  </div>
+<% else %>
+  <div class="yet-user-wrapper">
+    <%= render 'shared/yet_user' %>
+  </div>
+<% end %>

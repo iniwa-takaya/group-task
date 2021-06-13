@@ -64,3 +64,11 @@ a:hover {
   background: ghostwhite;
   border-top: 1px solid gray;
 }
+
+/* 未登録ユーザーへの表示 */
+.yet-user-wrapper {
+  display: flex;
+  flex-flow: column;
+  height: calc(100vh - 100px);
+  overflow: scroll;
+}

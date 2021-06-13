@@ -27,7 +27,7 @@
           参加中のグループ一覧
         </div>
         <div class="group-index-menu">
-          <% current_user.task_groups.each do |group| %>
+          <% current_user.task_groups.order("created_at").each do |group| %>
             <div class="group-index-content">
               <%= link_to group.g_name, task_group_spaces_path(group), class: "group-index-content-link" %>
             </div>
