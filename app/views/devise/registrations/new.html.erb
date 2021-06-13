@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="main-window">
     <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+      <%= render 'shared/error_form', model: f.object %>
 
       <div class="field">
         <%= f.label :nick_name %><br />
