@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nick_name: ニックネーム
+      task_group:
+        g_name: チーム名
+      space:
+        s_name: 作業スペースの名前
+      task:
+        content: タスクの内容
+        status: タスクの条件
