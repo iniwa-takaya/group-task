@@ -5,8 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   with_options presence: true do
-    validates :nick_name, uniqueness: true
+    validates :nick_name, uniqueness: { case_sensitive: false }
   end
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
 
   has_many :task_group_users
   has_many :task_groups, through: :task_group_users
