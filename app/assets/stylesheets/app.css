@@ -61,6 +61,7 @@ a:hover {
   width: calc(100vw - 500px);
   background-color: ghostwhite;
   border-right: 1px solid rgb(223, 223, 223);
+  overflow: scroll;
 }
 /* フッターのCSS */
 .footer {
