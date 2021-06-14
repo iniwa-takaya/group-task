@@ -28,7 +28,11 @@
                 </div>
                 <div class="task-index-content-index">
                   <div class="task-index-content-content"><%= task.content %></div>
-                  <div class="task-index-content-deadline"><%= "~ #{l task.deadline}" %></div>
+                  <% unless task.deadline == nil %>
+                    <div class="task-index-content-deadline"><%= "~ #{l task.deadline}" %></div>
+                  <% else %>
+                    <div class="task-index-content-deadline">期限なし</div>
+                  <% end %>
                 </div>
               </div>
             <% end %>
@@ -48,7 +52,11 @@
                 </div>
                 <div class="task-index-content-index">
                   <div class="task-index-content-content"><%= task.content %></div>
-                  <div class="task-index-content-deadline"><%= "~ #{l task.deadline}" %></div>
+                  <% unless task.deadline == nil %>
+                    <div class="task-index-content-deadline"><%= "~ #{l task.deadline}" %></div>
+                  <% else %>
+                    <div class="task-index-content-deadline">期限なし</div>
+                  <% end %>
                 </div>
               </div>
             <% end %>

@@ -73,7 +73,7 @@ a:hover {
 .yet-user-wrapper {
   display: flex;
   flex-flow: column;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 100px - 40px);
   padding: 20px 0px;
   overflow: scroll;
   background-image: linear-gradient( 135deg, #f0f1f1 10%, #85cfc8 100%);

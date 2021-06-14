@@ -59,7 +59,7 @@
 | Column         | Type      | Options     |
 | -------------- | --------- | ----------- |
 | content        | string    | null: false |
-| deadline       | datetime  | null: false |
+| deadline       | timestamp |             |
 | status         | boolean   | null: false |
 | space          | references| foreign_key: true|
 | task_group     | references| foreign_key: true|
