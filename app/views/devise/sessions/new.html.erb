@@ -15,8 +15,9 @@
         </div>
 
         <div class="field-title">パスワード</div>
-        <div class="field">
+        <div class="field-password">
           <%= f.password_field :password, class:"input-default" %>
+          <%= image_tag 'open-eye', size: '32x32', class: "eye-btn" %>
         </div>
 
         <% if devise_mapping.rememberable? %>

@@ -9,8 +9,12 @@
 .field {
   margin: 0px auto 20px;
 }
+.field-password {
+  margin: 0px auto 20px;
+  position: relative;
+}
 .input-default {
-  width: 100%;
+  width: 95%;
   margin-top: 5px;
   height: 40px;
   padding: 10px 16px 8px;
@@ -19,6 +23,13 @@
   background: #fff;
   font-size: 20px;
   resize: none;
+}
+.eye-btn {
+  position:absolute;
+  top:50%;
+  right: 0px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 .file-field {
   margin: 40px auto 20px;
@@ -49,5 +60,5 @@
 }
 .link {
   text-align: center;
-  margin-top: 180px;
+  margin-top: 130px;
 }

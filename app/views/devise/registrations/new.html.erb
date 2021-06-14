@@ -5,7 +5,7 @@
       <p class="new-user-title"><%= image_tag 'create.png', size: '380x50', class: 'account-image' %></p>
       
       <%= render 'shared/error_form', model: f.object %>
-      
+
       <div class="field-title">ニックネーム</div>
       <div class="field">
         <%= f.text_field :nick_name, class:"input-default", id:"nickname", maxlength:"20" %>
@@ -17,8 +17,9 @@
       </div>
 
       <div class="field-title">パスワード（6文字以上数英字混合）</div>
-      <div class="field">
+      <div class="field-password">
         <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
+        <%= image_tag 'open-eye', size: '32x32', class: "eye-btn" %>
       </div>
 
       <div class="field-title">パスワード再入力</div>
