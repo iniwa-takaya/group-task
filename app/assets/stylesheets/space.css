@@ -1,0 +1,134 @@
+
+/* グループに関する情報 */
+.group-info {
+  text-align: center;
+  height: 500px;
+  width: 100%;
+}
+.group-info-title {
+  height: 30px;
+  font-size: 20px;
+  padding: 10px 0px;
+}
+.group-info-description {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 7px 0px 3px 0px;
+  height: 30px;
+  width: 90%;
+  border: 3px solid lightgray;
+  border-radius: 5px;
+  overflow: scroll;
+}
+.group-info-edit {
+  display: flex;
+  justify-content: space-around;
+}
+.group-info-path {
+  margin-bottom: 10px;
+  padding: 2px 10px;
+  height: 25px;
+  color: rgb(255, 255, 255);
+  background-color: lightgreen;
+  border: 1px solid lightgreen;
+  border-right: 2px solid black ;
+  border-bottom: 2px solid black ;
+  transition: 0.5s;
+}
+.group-info-path:hover {
+  color: black;
+  border: 1px solid black;
+}
+.group-info-member {
+  margin: 0 auto;
+  height: 50%;
+  width: 90%;
+  border: 3px solid lightgray;
+  border-radius: 5px;
+  overflow: scroll;
+}
+.grou-member-title {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px 0px;
+  border-bottom: 5px double lightgray;
+}
+.member-name {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  width: 120px;
+  margin: 5px;
+}
+/* グループ内で作成したスペース一覧 */
+.space-index {
+  height: 500px;
+  min-height: 200px;
+  width:  60%;
+  padding: 0px 200px;
+  text-align: center;
+  overflow: scroll;
+}
+.space-index-title {
+  margin: 5px 0;
+  font-size: 20px;
+}
+.space-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  height: 50px;
+}
+.space-name-path {
+  width: 80%;
+  border-bottom: 1px solid black;
+}
+.space-edit-index {
+  border-bottom: 1px solid black;
+}
+.space-edit-index:hover {
+  border: 1px solid black;
+}
+/* スペースに関する情報 */
+.space-new {
+  margin: 0 auto;
+  height: 300px;
+  width: 90%;
+  text-align: center;
+  border: 3px solid lightgray;
+  border-radius: 5px;
+}
+.space-new-title {
+  width: 100%;
+  margin-bottom: 10px 0;
+  font-size: 20px;
+}
+.space-new-form {
+  width: 60%;
+  margin: 0 auto;
+}
+.space-submit-btn {
+  margin-bottom: 10px;
+  height: 40px;
+  width: 150px;
+  font-size: 22px;
+  border: none;
+  border-right: 2px solid black ;
+  border-bottom: 2px solid black ;
+  background-color: rgb(195, 247, 235);
+  cursor: pointer;
+}
+.space-submit-btn:hover {
+  border: 1px solid black;
+}
+.space-field-title {
+  text-align: left;
+}
+.space-new-name {
+  width: 100%;
+}
+.space-new-description {
+  width: 100%;
+  height: 70px;
+}

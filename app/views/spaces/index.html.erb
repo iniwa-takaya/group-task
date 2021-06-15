@@ -3,77 +3,73 @@
     <%= render 'shared/side_bar' %>
   </div>
   <div class="main-window">
-    spaces機能のindexfile
-    <div class="space-contents">
-      <%# グループに関する情報の表示 %>
-      <div class="groups-info">
-        <div class="group-info-name">
-          <%= "現在参加中のグループは「#{@task_group.g_name}」です" %>
-        </div>
-        <div class="group-info-description">
-          <%= "「#{@task_group.g_description}」" %>
-        </div>
-        <div class="group-info-member">
-          <% @task_group.users.order("nick_name").each do |users| %>
-            <div class="member-name">
-              <% if users.image.attached? %>
-                <%= image_tag users.image.variant(resize: '30x30'), class: 'user-image' %>
-              <% else %>
-                <%= image_tag 'no-image.jpg', size: '30x30', class: 'user-image' %>
-              <% end %>
-              <%= users.nick_name %>
-            </div>
-          <% end %>
-        <div class="group-info-edit">
-          <%= link_to 'グループを編集する', edit_task_group_path(@task_group), class: "group-info-edit-path" %>
-          <%= link_to 'グループを削除する', task_group_path(@task_group), method: :delete,
-              data: { confirm: 'チームを削除すると、関連する作業スペースとタスクも削除されます' }, class: "group-info-delete-path" %>
-        </div>
-        </div>
+    <%# グループに関する情報の表示 %>
+    <div class="group-info">
+      <div class="group-info-title">
+        <%= "「#{@task_group.g_name}」に参加中" %>
       </div>
-      <%# スペースを新規作成するフォームの表示 %>
-      <div class="space-new">
-        <div class="space-new-title">
-          スペース作成フォーム
-        </div>
-        <div class="space-new-form">
-          <%= form_with model: [@task_group, @space], local: true do |f| %>
-            <%= render 'shared/error_form', model: f.object %>
-            <div class="space-form-field">
-              <div class="space-submit">
-                <%= f.submit "作業スペースを作成する" ,class: 'space-submit-btn' %>
-              </div>
-              <div>
-                <%= f.label :スペース名 %>
-              </div>
-              <div>
-                <%= f.text_field :s_name, placeholder: 'スペース名を入力してください' %>
-              </div>
-              <div>
-                <%= f.label :スペースの説明（任意） %>
-              </div>
-              <div>
-                <%= f.text_area :s_description, placeholder: 'スペースの説明を入力してください' %>
-              </div>
-            </div>
-          <% end %>
-        </div>
+      <div class="group-info-description">
+        <%= "説明: #{@task_group.g_description}" %>
       </div>
-      <%# グループ内で作成したスペースの表示 %>
-      <div class="space-index">
-        <div class="space-index-title">
-          現在作業中のスペース一覧
+      <div class="group-info-edit">
+        <%= link_to 'グループ名やメンバーを編集する', edit_task_group_path(@task_group), class: "group-info-path" %>
+        <%= link_to '削除する', task_group_path(@task_group), method: :delete,
+            data: { confirm: 'チームを削除すると、関連する作業スペースとタスクも削除されます' }, class: "group-info-path" %>
+      </div>
+      <div class="group-info-member">
+        <div class="grou-member-title">メンバー</div>
+        <% @task_group.users.order("nick_name").each do |users| %>
+          <div class="member-name">
+            <% if users.image.attached? %>
+              <%= image_tag users.image.variant(resize: '30x30'), class: 'user-image' %>
+            <% else %>
+              <%= image_tag 'no-image.jpg', size: '30x30', class: 'user-image' %>
+            <% end %>
+            <%= users.nick_name %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <%# グループ内で作成したスペースの表示 %>
+    <div class="space-index">
+      <div class="space-index-title">
+        参加中の作業スペース
+      </div>
+      <% @task_group.spaces.order("created_at").each do |space| %>
+        <div class="space-name">
+          <%= link_to space.s_name, task_group_space_tasks_path(@task_group, space),class: "space-name-path" %>
+          <div class="space-edit-index">
+            <%= link_to '編集', edit_task_group_space_path(@task_group, space) %>
+            <%= link_to '削除', task_group_space_path(@task_group, space), method: :delete,
+              data: { confirm: 'スペースを削除すると、スペース内のタスクも同時に削除されます' }, class:"space-destroy" %>
+          </div>
         </div>
-        <div class="sapce-index-content">
-          <% @task_group.spaces.order("created_at").each do |space| %>
-            <div class="space-name">
-              <%= link_to space.s_name, task_group_space_tasks_path(@task_group, space),class: "space-name-path" %>
-              <%= link_to '編集', edit_task_group_space_path(@task_group, space) %>
-              <%= link_to '削除', task_group_space_path(@task_group, space), method: :delete,
-                  data: { confirm: 'スペースを削除すると、スペース内のタスクも同時に削除されます' }, class:"space-destroy" %>
+      <% end %>
+    </div>
+    <%# スペースを新規作成するフォームの表示 %>
+    <div class="space-new">
+      <div class="space-new-title">
+        ~ 作業スペースを作成しよう ~
+      </div>
+      <div class="space-new-form">
+        <%= form_with model: [@task_group, @space], local: true do |f| %>
+          <%= render 'shared/error_form', model: f.object %>
+            <div class="space-submit">
+              <%= f.submit "Create" ,class: 'space-submit-btn' %>
             </div>
-          <% end %>
-        </div>
+            <div class="space-field-title">
+              スペース名
+            </div>
+            <div class="field">
+              <%= f.text_field :s_name, placeholder: 'スペース名を入力してください', class: "space-new-name" %>
+            </div>
+            <div class="space-field-title">
+              スペースの説明（任意）
+            </div>
+            <div class="field">
+              <%= f.text_area :s_description, placeholder: 'スペースの説明を入力してください',class: "space-new-description" %>
+            </div>
+        <% end %>
       </div>
     </div>
   </div>

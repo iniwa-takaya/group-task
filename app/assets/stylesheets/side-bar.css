@@ -1,13 +1,13 @@
 .side-bar-content {
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
   align-items: center;
   height: calc(100vh - 110px);
   width: 190px;
   background-color: whitesmoke;
   margin: 5px auto;
   border-radius : 10px;
+  overflow: scroll;
 }
 /* ユーザーの情報 */
 .user-menu {
@@ -15,6 +15,7 @@
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  margin: 10px 0;
   height: 160px;
   width: 160px;
   background-color: white;
@@ -32,7 +33,7 @@
 }
 /* グループの情報 */
 .group-menu {
-  height: calc(100vh - 350px);
+  height: 590px;
   width: 180px;
   background-color: rgb(218, 255, 131);
   border-radius : 10px;
@@ -48,10 +49,12 @@
 }
 .group-index {
   margin: 10px auto;
-  height: calc(100vh - 420px);
+  height: calc(100vh - 400px);
+  min-height: 300px;
   width: 170px;
   background-color: rgb(216, 190, 141);
   border-radius : 5px;
+  overflow: scroll;
 }
 .group-index-title {
   display: flex;
@@ -60,8 +63,7 @@
   height: 50px;
 }
 .group-index-menu {
-  height: calc(100vh - 420px - 50px);
-  overflow: scroll;
+  height: 400px;
 }
 .group-index-content {
   display: flex;
