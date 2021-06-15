@@ -1,7 +1,7 @@
 class SpacesController < ApplicationController
-  before_action :find_task_group, only: %i[index create edit update destroy] 
-  before_action :find_space, only: %i[edit update destroy] 
-  
+  before_action :find_task_group, only: %i[index create edit update destroy]
+  before_action :find_space, only: %i[edit update destroy]
+
   def index
     @space = Space.new
     @spaces = @task_group.spaces.includes(:task_group)
@@ -40,7 +40,7 @@ class SpacesController < ApplicationController
   def find_task_group
     @task_group = TaskGroup.find(params[:task_group_id])
   end
-  
+
   def find_space
     @space = Space.find(params[:id])
   end

@@ -4,9 +4,8 @@ RSpec.describe User, type: :model do
   before do
     @user = FactoryBot.build(:user)
   end
-  
+
   describe 'ユーザーの新規登録機能' do
-    
     context '新規登録できる時' do
       it '全ての情報がある時、登録できる' do
         expect(@user).to be_valid
@@ -24,20 +23,20 @@ RSpec.describe User, type: :model do
 
     context '新規登録できない時' do
       it 'nick_nameが空では登録できない' do
-        @user.nick_name = ""
+        @user.nick_name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("ニックネームを入力してください")
+        expect(@user.errors.full_messages).to include('ニックネームを入力してください')
       end
       it '重複したnick_nameが存在する場合は登録できない' do
         @user.save
         another_user = FactoryBot.build(:user, nick_name: @user.nick_name)
         another_user.valid?
-        expect(another_user.errors.full_messages).to include("ニックネームはすでに存在します")
+        expect(another_user.errors.full_messages).to include('ニックネームはすでに存在します')
       end
       it 'emailが空では登録できない' do
         @user.email = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Eメールを入力してください")
+        expect(@user.errors.full_messages).to include('Eメールを入力してください')
       end
       it '@がなければemailは登録できない' do
         @user.email = 'abc.com'
@@ -53,7 +52,7 @@ RSpec.describe User, type: :model do
       it 'passwordが空では登録できない' do
         @user.password = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードを入力してください")
+        expect(@user.errors.full_messages).to include('パスワードを入力してください')
       end
       it 'passwordは、数字のみでは登録できない' do
         @user.password = '123456'
@@ -82,15 +81,14 @@ RSpec.describe User, type: :model do
       it 'passwordが存在してもpassword_confirmationが空では登録できない' do
         @user.password_confirmation = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
       it 'passwordとpassword_confirmationが不一致では登録できないこと' do
         @user.password = 'a123456'
         @user.password_confirmation = 'a1234567'
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
     end
-
   end
 end

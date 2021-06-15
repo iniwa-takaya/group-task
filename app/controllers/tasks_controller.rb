@@ -1,5 +1,4 @@
 class TasksController < ApplicationController
-
   def index
     @task = Task.new
     @task_group = TaskGroup.find(params[:task_group_id])
