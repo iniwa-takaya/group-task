@@ -26,7 +26,8 @@
           <% end %>
         <div class="group-info-edit">
           <%= link_to 'グループを編集する', edit_task_group_path(@task_group), class: "group-info-edit-path" %>
-          <%= link_to 'グループを削除する', task_group_path(@task_group), method: :delete, class: "group-info-delete-path" %>
+          <%= link_to 'グループを削除する', task_group_path(@task_group), method: :delete,
+              data: { confirm: 'チームを削除すると、関連する作業スペースとタスクも削除されます' }, class: "group-info-delete-path" %>
         </div>
         </div>
       </div>
