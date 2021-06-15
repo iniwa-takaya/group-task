@@ -6,7 +6,7 @@
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
-require("../ragistrations_password")
+require("../registrations_password")
 require("../sessions_password")
 
 
