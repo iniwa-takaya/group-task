@@ -7,7 +7,7 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :nick_name, uniqueness: { case_sensitive: false }
   end
-  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }, on: :create
 
   has_many :task_group_users
   has_many :task_groups, through: :task_group_users
