@@ -15,15 +15,13 @@
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  height: 180px;
-  width: 180px;
+  height: 160px;
+  width: 160px;
   background-color: white;
   border-radius : 50px;
 }
 .user-icon {
   text-align: center;
-  height: 120px;
-  width: 120px;
 }
 .user-image {
   border: 1px solid rgb(214, 214, 214);

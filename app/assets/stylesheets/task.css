@@ -3,30 +3,34 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  height: 100px;
+  height: 120px;
   width: 100%;
 }
 .space-info-title {
-  padding: 10px 0px 0px 0px;
+  height: 30px;
+  font-size: 20px;
+  padding: 10px 0px;
 }
 .space-info-index {
+  height: 50px;
   width: 80%;
   justify-content: space-around;
   border: 1px solid black;
-  padding: 5px 8px 5px 8px;
+  padding: 5px 8px;
   overflow: scroll;
 }
 /* 未完了のタスクの表示 */
 .tasks-index {
-  height: calc(100vh - 100px - 100px - 100px);
-  width: calc(100vw - 550px);
+  height: 700px;
+  width: 90%;
   margin: 10px 15px 10px 15px;
   padding: 0px 10px;
-  border: 1px solid rgb(226, 245, 245);
+  border: 1px solid rgb(178, 192, 192);
   border-radius: 5px;
+  overflow: scroll;
 }
 .task-index-contents {
-  height: calc(100vh - 100px - 100px - 100px - 200px);
+  height: 400px;
   width: 100%;
   overflow: scroll;
 }
@@ -70,7 +74,6 @@
 }
 /* 完了済のタスクの表示 */
 .task-index-contents-done {
-  height: 200px;
   width: 100%;
   border-top: 1px solid black;
   overflow: scroll;
@@ -97,12 +100,12 @@
   align-items: center;
   background-color: cornsilk;
   height: 100px;
-  width: calc(100vw - 500px);
+  width: 100%;
 }
 .form-parts {
   display: flex;
   align-items: center;
-  margin: 5px 20px 5px 10px;
+  margin: 5px 10px;
 }
 .form-part-name {
   display: flex;
@@ -111,10 +114,13 @@
   width: 80px;
 }
 .form-part-content {
-  width: calc(100vw - 620px);
+  width: 50vw;
 }
 .task-new-form-content {
   width: 100%;
+}
+.task-new-form-deadline {
+  width: 10vw;
 }
 .form-part-btn {
   margin-left: 10px;
