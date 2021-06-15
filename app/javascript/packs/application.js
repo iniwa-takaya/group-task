@@ -6,6 +6,8 @@
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
+require("../ragistrations_password")
+require("../sessions_password")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
