@@ -20,11 +20,13 @@
     <%# ユーザーが登録済みの場合の表示 %>
     <% if user_signed_in? %>
       <div class="group-new-menu">
-        <%= link_to '新規グループの作成', new_task_group_path, class: "group-new-path" %>
+        <%= link_to new_task_group_path, class: "group-new-path" do %>
+          <%= image_tag 'group-new.png', size: '150x40' %>
+        <% end %>
       </div>
       <div class="group-index">
         <div class="group-index-title">
-          参加中のグループ一覧
+          参加中のチーム
         </div>
         <div class="group-index-menu">
           <% current_user.task_groups.order("created_at").each do |group| %>

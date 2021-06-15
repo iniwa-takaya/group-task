@@ -34,7 +34,7 @@
 .group-menu {
   height: calc(100vh - 350px);
   width: 180px;
-  background-color: rgb(255, 207, 134);
+  background-color: rgb(218, 255, 131);
   border-radius : 10px;
 }
 .group-new-menu {
@@ -50,7 +50,7 @@
   margin: 10px auto;
   height: calc(100vh - 420px);
   width: 170px;
-  background-color: rgb(243, 227, 200);
+  background-color: rgb(216, 190, 141);
   border-radius : 5px;
 }
 .group-index-title {
@@ -73,8 +73,12 @@
   border-bottom: 1px solid white;
 }
 .group-index-content:hover {
-  background-color: rgb(212, 194, 194);
+  background-color: rgb(201, 212, 194);
 }
 .group-index-content-link {
   color: white;
+  transition: 0.8s;
+}
+.group-index-content-link:hover {
+  color: black;
 }
