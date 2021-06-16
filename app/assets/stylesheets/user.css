@@ -1,3 +1,4 @@
+/* ユーザーの新規登録とログイン関係のCSS */
 /* registrations/new.html.erb */
 .registration-main {
   display: block;
@@ -151,4 +152,68 @@
   color: black;
   background-color: rgb(190, 189, 189);
   box-shadow: 0 0 10px black;
+}
+
+/* ユーザーのマイページに関するCSS */
+.mypage {
+  width: 70%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.mypage-title {
+  font-size: 2rem;
+  padding-bottom: 30px;
+}
+.user-infomaition {
+  width: 100%;
+  border: 1px solid black;
+  overflow: scroll;
+  margin-bottom: 50px;
+}
+.user-show-index {
+  display: flex;
+  align-items: center;
+}
+.user-show-index-title {
+  min-width: 180px;
+  padding-left: 20px;
+}
+.user-show-content {
+  border-left: 1px solid black;
+  padding: 10px;
+}
+.user-show-edit {
+  text-align: center;
+}
+.user-show-btn {
+  display: inline-block;
+  padding-top: 10px;
+  height: 50px;
+  width: 300px;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgb(116, 116, 116);
+  transition: 1s;
+}
+.user-show-btn:hover {
+  display: inline-block;
+  padding-top: 10px;
+  height: 50px;
+  width: 300px;
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.459);
+}
+/* ユーザー情報編集画面 */
+.edit-actions {
+  padding-top: 30px;
+  text-align: center;
+}
+.edit-show-title {
+  margin: 100px 0px 40px 0px;
+  text-align: center;
 }
