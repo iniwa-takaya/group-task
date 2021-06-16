@@ -41,13 +41,13 @@
 }
 .group-info-member {
   margin: 0 auto;
-  height: 50%;
+  height: 150px;
   width: 90%;
   border: 3px solid lightgray;
   border-radius: 5px;
   overflow: scroll;
 }
-.grou-member-title {
+.group-member-title {
   width: 100%;
   margin: 0 auto;
   padding: 5px 0px;

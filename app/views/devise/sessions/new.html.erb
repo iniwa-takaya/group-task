@@ -1,9 +1,8 @@
 <div class="wrapper">
   <div class="main-window">
-    <p class="login-user-title"><%= image_tag 'login.png', size: '300x50', class: 'account-image' %></p>
     <div class="login-form">
-      <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
-      
+      <%= form_with model: @user, url: user_session_path, class: 'session-main', local: true do |f| %>
+        <p class="login-user-title"><%= image_tag 'login.png', size: '300x50', class: 'account-image' %></p>
         <div class='login-flash-message'>
           <%= flash[:notice] %>
           <%= flash[:alert] %>
@@ -31,10 +30,19 @@
           <%= f.submit "ログイン", class: "button" %>
         </div>
       <% end %>
-    </div>
-    
-    <div class="link">
-      <%= render "devise/shared/links" %>
+
+      <div class="link">
+        <%= render "devise/shared/links" %>
+      </div>
+
+      <div class="other-session">
+        <div class="other-session-title">SNSでログイン</div>
+        <div class="other-session-index">
+          <div class="sns-session-btn"><%= link_to 'Google', class: "sns-session-pass" %></div>
+          <div class="sns-session-btn"><%= link_to 'Facebook', class: "sns-session-pass" %></div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>

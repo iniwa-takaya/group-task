@@ -17,7 +17,7 @@
             data: { confirm: 'チームを削除すると、関連する作業スペースとタスクも削除されます' }, class: "group-info-path" %>
       </div>
       <div class="group-info-member">
-        <div class="grou-member-title">メンバー</div>
+        <div class="group-member-title">メンバー</div>
         <% @task_group.users.order("nick_name").each do |users| %>
           <div class="member-name">
             <% if users.image.attached? %>
