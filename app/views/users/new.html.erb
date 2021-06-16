@@ -3,8 +3,8 @@
     <div class="user-new-title">登録方法を選択してください</div>
     <div class="user-new-index">
       <div class="user-new-btn"><%= link_to 'メールアドレス', new_user_registration_path,class: "user-new-btn-pass" %></div>
-      <div class="user-new-btn"><%= link_to 'Google', "#",class: "user-new-btn-pass" %></div>
-      <div class="user-new-btn"><%= link_to 'Facebook', "#",class: "user-new-btn-pass" %></div>
+      <div class="user-new-btn"><%= link_to 'Google', user_google_oauth2_omniauth_authorize_path, method: :post, class: "user-new-btn-pass" %></div>
+      <div class="user-new-btn"><%= link_to 'Facebook', user_facebook_omniauth_authorize_path, method: :post, class: "user-new-btn-pass" %></div>
     </div>
   </div>
 </div>

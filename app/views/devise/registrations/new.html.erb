@@ -16,16 +16,20 @@
         <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
       </div>
 
-      <div class="field-title">パスワード（6文字以上数英字混合）</div>
-      <div class="field-password">
-        <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
-        <%= image_tag 'open-eye', size: '32x32', class: "eye-btn",id: "session-eye" %>
-      </div>
+      <%if @sns_id.present? %>
+        <%= hidden_field_tag :sns_auth, true %>
+      <% else %>
+        <div class="field-title">パスワード（6文字以上数英字混合）</div>
+        <div class="field-password">
+          <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
+          <%= image_tag 'open-eye', size: '32x32', class: "eye-btn",id: "session-eye" %>
+        </div>
 
-      <div class="field-title">パスワード再入力</div>
-      <div class="field">
-        <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
-      </div>
+        <div class="field-title">パスワード再入力</div>
+        <div class="field">
+          <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+        </div>
+      <% end %>
 
       <div class="field-title">アイコン画像（任意）</div>
       <div class="file-field">

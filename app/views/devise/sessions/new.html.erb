@@ -38,8 +38,8 @@
       <div class="other-session">
         <div class="other-session-title">SNSでログイン</div>
         <div class="other-session-index">
-          <div class="sns-session-btn"><%= link_to 'Google', class: "sns-session-pass" %></div>
-          <div class="sns-session-btn"><%= link_to 'Facebook', class: "sns-session-pass" %></div>
+          <div class="sns-session-btn"><%= link_to 'Google', user_facebook_omniauth_authorize_path, method: :post, class: "sns-session-pass" %></div>
+          <div class="sns-session-btn"><%= link_to 'Facebook', user_facebook_omniauth_authorize_path, method: :post, class: "sns-session-pass" %></div>
         </div>
       </div>
       
