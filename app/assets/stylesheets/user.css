@@ -153,6 +153,45 @@
   background-color: rgb(190, 189, 189);
   box-shadow: 0 0 10px black;
 }
+.google-new-btn-pass {
+  display: inline-block;
+  padding-top: 15px;
+  height: 50px;
+  width: 300px;
+  font-size: 1.5rem;
+  color: rgb(87, 147, 236);
+  background-color: rgb(235, 229, 229);
+  border: 1px solid lightgrey;
+}
+.google-new-btn-pass:hover {
+  display: inline-block;
+  padding-top: 15px;
+  height: 50px;
+  width: 300px;
+  font-size: 1.5rem;
+  color: rgb(87, 147, 236);
+  background-color: rgb(235, 235, 235);
+  box-shadow: 0 0 10px black;
+}
+.facebook-new-btn-pass {
+  display: inline-block;
+  padding-top: 15px;
+  height: 50px;
+  width: 300px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: rgb(12, 138, 196);
+}
+.facebook-new-btn-pass:hover {
+  display: inline-block;
+  padding-top: 15px;
+  height: 50px;
+  width: 300px;
+  font-size: 1.5rem;
+  color: black;
+  background-color: rgb(190, 189, 189);
+  box-shadow: 0 0 10px black;
+}
 
 /* ユーザーのマイページに関するCSS */
 .mypage {

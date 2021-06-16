@@ -3,36 +3,33 @@
     <%= render 'shared/side_bar' %>
   </div>
   <div class="main-window">
-  group機能のeditfile
-    <div class="edit-form">
-      <div class="edit-form-title">
-        <%= "#{@task_group.g_name} 情報変更ページ" %>
-      </div>
-      <div class="group-form">
-        <%= form_with model: @task_group, local: true do |f| %>
-          <%= render 'shared/error_form', model: f.object %>
-          <div class="task-group-form-field">
-            <div>
-              <%= f.label :グループ名 %>
-            </div>
-            <div>
-              <%= f.text_field :g_name, placeholder: 'グループ名を入力してください' %>
-            </div>
-            <div>
-              <%= f.label :グループの説明 %>
-            </div>
-            <div>
-              <%= f.text_area :g_description, placeholder: 'グループの説明を入力してください' %>
-            </div>
-            <div class="task-group-member-field">
-              <%= f.collection_check_boxes :user_ids, User.all, :id, :nick_name %>
-            </div>
-            <div class="task-group-submit">
-              <%= f.submit "グループ情報を編集する" ,class: 'task-group-submit-btn' %>
-            </div>
-          </div>
-        <% end %>
-      </div>
+    <div class="form-title">
+      <%= image_tag 'group-edit.png', size: '300x80', class: 'account-image' %>
     </div>
+    <%= form_with model: @task_group, class: 'registration-main', local: true do |f| %>
+      <%= render 'shared/error_form', model: f.object %>
+      <div class="task-group-form-field">
+
+        <div class="field-title">チームの名前</div>
+        <div class="field-form-name">
+          <%= f.text_field :g_name, placeholder: 'グループ名を入力してください', class:"field-default" %>
+        </div>
+        
+        <div class="field-title">チームの説明</div>
+        <div class="field-form-description">
+          <%= f.text_area :g_description, placeholder: 'グループの説明を入力してください', class:"field-description" %>
+        </div>
+
+        <div class="field-title">このチームに参加するメンバー</div>
+        <div class="task-group-member-field">
+          <%= f.collection_check_boxes :user_ids, User.all, :id, :nick_name, class: "task-group-member" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "作成する" ,class: 'button' %>
+        </div>
+
+      </div>
+    <% end %>
   </div> 
 </div>

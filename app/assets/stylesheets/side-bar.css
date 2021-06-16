@@ -66,21 +66,28 @@
   height: 400px;
 }
 .group-index-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  height: 40px;
-  width: 150px;
-  border-bottom: 1px solid white;
+  text-align: center;
 }
 .group-index-content:hover {
-  background-color: rgb(201, 212, 194);
+  text-align: center;
 }
 .group-index-content-link {
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 10px;
+  height: 30px;
+  width: 150px;
+  border-bottom: 1px solid white;
   color: white;
-  transition: 0.8s;
+  transition: 1s;
 }
 .group-index-content-link:hover {
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 10px;
+  height: 30px;
+  width: 150px;
+  border-bottom: 1px solid white;
+  background-color: rgb(201, 212, 194);
   color: black;
 }
