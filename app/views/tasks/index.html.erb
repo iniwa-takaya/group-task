@@ -20,7 +20,7 @@
       <div class="tasks-index-contents">
         <%# 未完了のタスクを表示 %>
         <div class="task-index-contents">
-          <div class="task-index-contents-title">進行中</div>
+          <div class="task-index-contents-title"><b>進行中</b></div>
           <% @space.tasks.order("deadline").each do |task| %>
             <% unless task.status %>
               <div class="task-index-content">
@@ -44,7 +44,7 @@
         </div>
         <%# 完了済のタスクを表示 %>
         <div class="task-index-contents-done">
-          <div class="task-index-contents-title">完了済</div>
+          <div class="task-index-contents-title"><b>完了済</b></div>
           <% @space.tasks.order("deadline").each do |task| %>
             <% if task.status %>
               <div class="task-index-content">

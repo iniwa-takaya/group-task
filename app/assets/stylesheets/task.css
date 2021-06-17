@@ -21,7 +21,7 @@
 }
 /* 未完了のタスクの表示 */
 .tasks-index {
-  height: 700px;
+  min-height: 500px;
   width: 90%;
   margin: 10px 15px 10px 15px;
   padding: 0px 10px;
@@ -30,7 +30,7 @@
   overflow: scroll;
 }
 .task-index-contents {
-  height: 400px;
+  min-height: 300px;
   width: 100%;
   overflow: scroll;
 }
@@ -45,7 +45,7 @@
   padding: 5px;
 }
 .task-edit {
-  width: 60px;
+  min-width: 60px;
 }
 .task-index-content-status {
   width: 30px;
@@ -74,6 +74,7 @@
 }
 /* 完了済のタスクの表示 */
 .task-index-contents-done {
+  min-height: 200px;
   width: 100%;
   border-top: 1px solid black;
   overflow: scroll;
@@ -99,7 +100,7 @@
   display: flex;
   align-items: center;
   background-color: cornsilk;
-  height: 100px;
+  min-height: 150px;
   width: 100%;
   overflow: scroll;
 }
