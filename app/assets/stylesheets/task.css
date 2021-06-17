@@ -101,6 +101,7 @@
   background-color: cornsilk;
   height: 100px;
   width: 100%;
+  overflow: scroll;
 }
 .form-parts {
   display: flex;

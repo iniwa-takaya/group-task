@@ -8,7 +8,11 @@
       <div class="space-info-title">現在選択中の作業スペース</div>
       <div class="space-info-index">
         <div class="space-info-index-title"><%= "名前: #{@space.s_name}" %></div>
-        <div class="space-info-index-description"><%= "説明: #{@space.s_description}" %></div>
+        <% if @space.s_description.present? %>
+          <div class="space-info-index-description"><%= "説明: #{@space.s_description}" %></div>
+        <% else %>
+          <div class="space-info-index-description">説明: 作業スペースの詳細は未設定です</div>
+        <% end %>
       </div>
     </div>
     <%# タスクの表示 %>

@@ -9,7 +9,11 @@
         <%= "「#{@task_group.g_name}」に参加中" %>
       </div>
       <div class="group-info-description">
-        <%= "説明: #{@task_group.g_description}" %>
+        <% if @task_group.g_description.present? %>
+          <%= "説明: #{@task_group.g_description}" %>
+        <% else %>
+          説明: チームの詳細は未設定です。
+        <% end %>
       </div>
       <div class="group-info-edit">
         <%= link_to 'グループ名やメンバーを編集する', edit_task_group_path(@task_group), class: "group-info-path" %>
@@ -39,9 +43,9 @@
         <div class="space-name">
           <%= link_to space.s_name, task_group_space_tasks_path(@task_group, space),class: "space-name-path" %>
           <div class="space-edit-index">
-            <%= link_to '編集', edit_task_group_space_path(@task_group, space) %>
+            <%= link_to '編集', edit_task_group_space_path(@task_group, space), class: "space-edit-content" %>
             <%= link_to '削除', task_group_space_path(@task_group, space), method: :delete,
-              data: { confirm: 'スペースを削除すると、スペース内のタスクも同時に削除されます' }, class:"space-destroy" %>
+              data: { confirm: 'スペースを削除すると、スペース内のタスクも同時に削除されます' }, class:"space-delete-content" %>
           </div>
         </div>
       <% end %>

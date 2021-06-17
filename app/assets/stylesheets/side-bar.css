@@ -67,6 +67,7 @@
 }
 .group-index-content {
   text-align: center;
+  margin-bottom: 5px;
 }
 .group-index-content:hover {
   text-align: center;
@@ -74,6 +75,7 @@
 .group-index-content-link {
   display: inline-block;
   margin: 0 auto;
+  font-size: 1.2rem;
   padding-top: 10px;
   height: 30px;
   width: 150px;
@@ -84,6 +86,7 @@
 .group-index-content-link:hover {
   display: inline-block;
   margin: 0 auto;
+  font-size: 1.2rem;
   padding-top: 10px;
   height: 30px;
   width: 150px;
