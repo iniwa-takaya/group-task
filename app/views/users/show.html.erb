@@ -24,6 +24,10 @@
           <div class="user-show-index-title">メールアドレス</div>
           <div class="user-show-content"><%= current_user.email %></div>
         </div>
+        <div class="user-show-index">
+          <div class="user-show-index-title">チームID（8桁）</div>
+          <div class="user-show-content"><%= current_user.group_number %></div>
+        </div>
       </div>
       <div class="user-show-edit">
         <%= link_to 'ユーザー情報を編集する', edit_user_path(current_user), class: "user-show-btn" %>

@@ -3,6 +3,7 @@ ja:
     attributes:
       user:
         nick_name: ニックネーム
+        group_number: チームID
       task_group:
         g_name: チーム名
       space:
