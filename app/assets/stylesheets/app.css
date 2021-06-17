@@ -3,6 +3,9 @@ a {
   color: #000;
   transition: all 0.5s;
 }
+span {
+  color: red;
+}
 a:hover {
   color: lightskyblue;
 }
@@ -66,9 +69,11 @@ a:hover {
 }
 /* フッターのCSS */
 .footer {
-  height: calc(50px - 1px);
+  padding-top: 10px;
+  height: calc(50px - 10px - 1px);
   background: rgb(209, 209, 209);
   border-top: 1px solid gray;
+  text-align: center;
 }
 
 /* 未登録ユーザーへの表示 */

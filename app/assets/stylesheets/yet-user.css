@@ -21,7 +21,7 @@
   border-radius: 10px;
 }
 .yet-user-main-description-main {
-  font-size: 18px;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 .three {
@@ -31,6 +31,7 @@
 .yet-user-main-description-main-contents {
   display: flex;
   margin: 5px auto;
+  font-size: 1.1rem;
 }
 .capital {
   font-size: 1.1rem;
@@ -55,23 +56,65 @@
   margin: auto;
 }
 .yet-user-detail-title {
-  width: calc(100vw - 300px);
   margin-top: 20px;
   font-size: 30px;
   text-align: center;
 }
-.yet-user-detail-content-left {
-  text-align: left;
+.yet-user-detail-user {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 200px;
+  border-radius: 50px;
+  background-color: ghostwhite;
+  overflow: auto;
+  min-width: 450px;
 }
-.yet-user-detail-content-right {
-  text-align: right;
+.yet-user-detail-user-content {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: 1px solid rgb(219, 227, 236);
+  min-width: 200px;
+  overflow: auto;
+}
+.content-title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 10px 0px;
+}
+.content {
+  text-align: center;
+  margin-top: 10px;
+}
+.yet-user-detail-contents {
+  text-align: center;
+}
+.yet-user-detail-content-title {
+  font-size: 1.5rem;
 }
 .yet-user-detail-content {
   display: inline-block;
-  height: 500px;
-  width: 60%;
+  padding: 20px 10px;
+  height: 600px;
+  width: 50vw;
+  min-width: 400px;
   margin-top: 10px;
   border: 1px solid rgb(194, 193, 193);
   border-radius: 50px;
   background-color: ghostwhite;
+}
+.yet-user-log-new {
+  display: inline-block;
+  min-width: 400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  color: red;
+  background-color: rosybrown;
+  border: 1px solid red;
+  box-shadow: 5px 5px 6px 0px #00000082;
+  transition: 0.5s;
+}
+.yet-user-log-new:hover {
+  color: red;
+  box-shadow: none;
 }

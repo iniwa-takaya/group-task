@@ -26,17 +26,67 @@
   </div>
 </div>
 <div class="yet-user-detail">
-  <div class="yet-user-detail-title">タスクを管理しよう！</div>
+  <div class="yet-user-detail-title"><b>タスクを管理しよう！</b></div>
+
+  <div class="yet-user-detail-title">~ ユーザーを登録しよう ~</div>
+    <div class="yet-user-detail-user">
+      <div class="yet-user-detail-user-content">
+        <p class="content-title">チームIDを使いこなそう</p>
+        <div class="content">
+          ◎ 一緒にアプリを使うチーム内で8桁の数字を決定しよう
+        </div>
+        <div class="content">
+          <span>チームIDが同じユーザー同士であれば、いくつでもチームを作成可能</span>
+        </div>
+      </div>
+      <div class="yet-user-detail-user-content">
+        <%= image_tag 'user-content.jpg', size: '250x160' %>
+      </div>
+    </div>
+
   <div class="yet-user-detail-title">~ チームを作成しよう ~</div>
-  <div class="yet-user-detail-content-left">
-    <div class="yet-user-detail-content"></div>
+  <div class="yet-user-detail-contents">
+    <div class="yet-user-detail-content">
+      <div class="yet-user-detail-content-title"><span>できること</span></div>
+      <div class="content">
+        <b>いくつでもチームを作成可能</b>
+      </div>
+      <div class="content">
+        <b>同ID内のユーザーであれば、それぞれのチームメンバーを自由に作成できる</b>
+      </div>
+      <div class="detail-content-image">
+        <%= image_tag 'yet-group.jpg', size: '400x400' %>
+      </div>
+    </div>
   </div>
+
   <div class="yet-user-detail-title">~ プロジェクトを作成しよう ~</div>
-  <div class="yet-user-detail-content-right">
-    <div class="yet-user-detail-content"></div>
+  <div class="yet-user-detail-contents">
+    <div class="yet-user-detail-content">
+      <div class="yet-user-detail-content-title"><span>できること</span></div>
+      <div class="content">
+        <b>チームの中に複数の作業スペースが作成可能</b>
+      </div>
+      <div class="detail-content-image">
+        <%= image_tag 'yet-space.jpg', size: '400x500' %>
+      </div>
+    </div>
   </div>
+
   <div class="yet-user-detail-title">~ タスクを作成しよう ~</div>
-  <div class="yet-user-detail-content-left">
-    <div class="yet-user-detail-content"></div>
+  <div class="yet-user-detail-contents">
+    <div class="yet-user-detail-content">
+      <div class="yet-user-detail-content-title"><span>できること</span></div>
+      <div class="content">
+        タスクを期限ごとで管理
+      </div>
+      <div class="detail-content-image">
+        <%= image_tag 'yet-task.jpg', size: '400x500' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="yet-user-detail-title">
+    <%= link_to 'アカウント登録してアプリを使い始める！', new_user_path, class: "yet-user-log-new"  %>
   </div>
 </div>
