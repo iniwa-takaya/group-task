@@ -8,7 +8,7 @@
 | ----------------- | ------ | ----------- |
 | email             | string | null: false, unique:true |
 | encrypted_password| string | null: false |
-| group_number      | bigint | null: false |
+| group_number      | string | null: false |
 | nick_name         | string | null: false, unique:true |
 
 #### Association

@@ -15,6 +15,9 @@ RSpec.describe User, type: :model do
         @user.password_confirmation = 'a12345'
         expect(@user).to be_valid
       end
+      it 'group_numberが8桁の半角数字であれば登録できる' do
+        expect(@user).to be_valid
+      end
       it 'imageが空でも登録できる' do
         @user.image = nil
         expect(@user).to be_valid
@@ -26,6 +29,36 @@ RSpec.describe User, type: :model do
         @user.nick_name = ''
         @user.valid?
         expect(@user.errors.full_messages).to include('ニックネームを入力してください')
+      end
+      it 'group_numberが空では購入できない' do
+        @user.group_number = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("チームIDを入力してください")
+      end
+      it 'group_numberが8桁より小さければ購入できない' do
+        @user.group_number = '1234567'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('チームIDは８桁の半角数字しか登録できません')
+      end
+      it 'group_numberが8桁より大きければ購入できない' do
+        @user.group_number = '123456789'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('チームIDは８桁の半角数字しか登録できません')
+      end
+      it 'group_numberが全角数字の場合は購入できない' do
+        @user.group_number = '１２３４５６７８'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('チームIDは８桁の半角数字しか登録できません')
+      end
+      it 'group_numberが半角英数字混合の場合は購入できない' do
+        @user.group_number = 'a1234567'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('チームIDは８桁の半角数字しか登録できません')
+      end
+      it 'group_numberが半角英字の場合は購入できない' do
+        @user.group_number = 'abcdefghijk'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('チームIDは８桁の半角数字しか登録できません')
       end
       it '重複したnick_nameが存在する場合は登録できない' do
         @user.save

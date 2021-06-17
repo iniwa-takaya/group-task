@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :nick_name, uniqueness: { case_sensitive: false }
-    validates :group_number
+    validates :group_number, format: { with: /\A\d{8}\z/, message: 'は８桁の半角数字しか登録できません' }
   end
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }, on: :create
 
