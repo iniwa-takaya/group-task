@@ -36,9 +36,21 @@
 }
 .file-field {
   margin: 40px auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .file-default {
   border: none;
+}
+#icon {
+  height: 70px;
+  width: 110px;
+  object-fit: contain;
+}
+#image-list {
+  border: 1px solid black;
+  border-radius: 5px;
 }
 .actions {
   text-align: center;
@@ -255,6 +267,10 @@
 .edit-show-title {
   margin: 100px 0px 40px 0px;
   text-align: center;
+}
+#image-list-edit {
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 /* スマホ表示時 */
