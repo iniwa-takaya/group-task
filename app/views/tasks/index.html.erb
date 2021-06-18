@@ -17,55 +17,53 @@
     </div>
     <%# タスクの表示 %>
     <div class="tasks-index">
-      <div class="tasks-index-contents">
-        <%# 未完了のタスクを表示 %>
-        <div class="task-index-contents">
-          <div class="task-index-contents-title"><b>進行中</b></div>
-          <% @space.tasks.order("deadline").each do |task| %>
-            <% unless task.status %>
-              <div class="task-index-content">
-                <div class="task-edit">
-                  <%= link_to "編集", edit_task_group_space_task_path(@task_group, @space, task),class: "task-edit-path" %>
-                </div>
-                <div class="task-index-content-status">
-                  <%= button_to "未完了", task_group_space_task_path(@task_group, @space, task, task: {content: task.content, status: true}), method: :put, class: "task-index-content-btn" %>
-                </div>
-                <div class="task-index-content-index">
-                  <div class="task-index-content-content"><%= task.content %></div>
-                  <% unless task.deadline == nil %>
-                    <div class="task-index-content-deadline"><%= "~ #{l task.deadline}" %></div>
-                  <% else %>
-                    <div class="task-index-content-deadline">期限なし</div>
-                  <% end %>
-                </div>
+      <%# 未完了のタスクを表示 %>
+      <div class="task-index-contents">
+        <div class="task-index-contents-title"><b>進行中</b></div>
+        <% @space.tasks.order("deadline").each do |task| %>
+          <% unless task.status %>
+            <div class="task-index-content">
+              <div class="task-edit">
+                <%= link_to "編集", edit_task_group_space_task_path(@task_group, @space, task),class: "task-edit-path" %>
               </div>
-            <% end %>
-          <% end %>
-        </div>
-        <%# 完了済のタスクを表示 %>
-        <div class="task-index-contents-done">
-          <div class="task-index-contents-title"><b>完了済</b></div>
-          <% @space.tasks.order("deadline").each do |task| %>
-            <% if task.status %>
-              <div class="task-index-content">
-                <div class="task-edit">
-                  <%= link_to "削除", task_group_space_task_path(@task_group, @space, task), method: :delete, class: "task-edit-path" %>
-                </div>
-                <div class="task-index-content-status">
-                  <%= button_to "完了", task_group_space_task_path(@task_group, @space, task, task: {content: task.content, status: false}), method: :put, class: "task-index-content-done-btn" %>
-                </div>
-                <div class="task-index-content-index">
-                  <div class="task-index-content-content"><%= task.content %></div>
-                  <% unless task.deadline == nil %>
-                    <div class="task-index-content-deadline"><%= "~ #{l task.deadline}" %></div>
-                  <% else %>
-                    <div class="task-index-content-deadline">期限なし</div>
-                  <% end %>
-                </div>
+              <div class="task-index-content-status">
+                <%= button_to "未完了", task_group_space_task_path(@task_group, @space, task, task: {content: task.content, status: true}), method: :put, class: "task-index-content-btn" %>
               </div>
-            <% end %>
+              <div class="task-index-content-index">
+                <div class="task-index-content-content"><%= task.content %></div>
+                <% unless task.deadline == nil %>
+                  <div class="task-index-content-deadline"><%= "~ #{l task.deadline}" %></div>
+                <% else %>
+                  <div class="task-index-content-deadline">期限なし</div>
+                <% end %>
+              </div>
+            </div>
           <% end %>
-        </div>
+        <% end %>
+      </div>
+      <%# 完了済のタスクを表示 %>
+      <div class="task-index-contents-done">
+        <div class="task-index-contents-title"><b>完了済</b></div>
+        <% @space.tasks.order("deadline").each do |task| %>
+          <% if task.status %>
+            <div class="task-index-content">
+              <div class="task-edit">
+                <%= link_to "削除", task_group_space_task_path(@task_group, @space, task), method: :delete, class: "task-edit-path" %>
+              </div>
+              <div class="task-index-content-status">
+                <%= button_to "完了", task_group_space_task_path(@task_group, @space, task, task: {content: task.content, status: false}), method: :put, class: "task-index-content-done-btn" %>
+              </div>
+              <div class="task-index-content-index">
+                <div class="task-index-content-content"><%= task.content %></div>
+                <% unless task.deadline == nil %>
+                  <div class="task-index-content-deadline"><%= "~ #{l task.deadline}" %></div>
+                <% else %>
+                  <div class="task-index-content-deadline">期限なし</div>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
       </div>
     </div>
     <%# 新規のタスクを作成するフォーム %>
