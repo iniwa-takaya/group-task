@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-  if ( document.getElementById('user_image')){
+  if ( document.getElementById('user_image_icon')){
     const ImageList = document.getElementById('image-list');
 
     const createImageHTML = (blob) => {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
       ImageList.appendChild(imageElement);
     };
 
-    document.getElementById('user_image').addEventListener('change', function(e){
+    document.getElementById('user_image_icon').addEventListener('change', function(e){
       const imageContent = document.getElementById('icon');
       if (imageContent){
         imageContent.remove();
