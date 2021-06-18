@@ -4,7 +4,47 @@
       <%= render 'shared/side_bar' %>
     </div>
     <div class="main-window">
-      task_groups機能のindexfile
+      <div class="yet-user-detail-title">~ チームを作成しよう ~</div>
+      <div class="yet-user-detail-contents">
+        <div class="yet-user-detail-content">
+          <div class="yet-user-detail-content-title"><span>できること</span></div>
+          <div class="content">
+            <b>いくつでもチームを作成可能</b>
+          </div>
+          <div class="content">
+            <b>同ID内のユーザーであれば、それぞれのチームメンバーを自由に作成できる</b>
+          </div>
+          <div class="detail-content-image">
+            <%= image_tag 'yet-group.jpg', size: '400x400' %>
+          </div>
+        </div>
+      </div>
+    
+      <div class="yet-user-detail-title">~ プロジェクトを作成しよう ~</div>
+      <div class="yet-user-detail-contents">
+        <div class="yet-user-detail-content">
+          <div class="yet-user-detail-content-title"><span>できること</span></div>
+          <div class="content">
+            <b>チームの中に複数の作業スペースが作成可能</b>
+          </div>
+          <div class="detail-content-image">
+            <%= image_tag 'yet-space.jpg', size: '400x500' %>
+          </div>
+        </div>
+      </div>
+    
+      <div class="yet-user-detail-title">~ タスクを作成しよう ~</div>
+      <div class="yet-user-detail-contents">
+        <div class="yet-user-detail-content">
+          <div class="yet-user-detail-content-title"><span>できること</span></div>
+          <div class="content">
+            タスクを期限ごとで管理
+          </div>
+          <div class="detail-content-image">
+            <%= image_tag 'yet-task.jpg', size: '400x500' %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 <% else %>
