@@ -109,7 +109,7 @@
   margin: 0 auto;
   padding: 10px 20px;
   color: red;
-  background-color: rosybrown;
+  background-color: rgb(224, 209, 209);
   border: 1px solid red;
   box-shadow: 5px 5px 6px 0px #00000082;
   transition: 0.5s;
@@ -117,4 +117,135 @@
 .yet-user-log-new:hover {
   color: red;
   box-shadow: none;
+}
+
+/* スマホ表示時 */
+@media (max-width: 599px) {
+  .yet-user-main {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+  }
+  .yet-user-main-description {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: ghostwhite;
+  }
+  .yet-user-main-description-title {
+    padding: 10px;
+    font-size: 23px;
+    margin-bottom: 10px;
+    background-image: linear-gradient( 135deg, #8bdfae 10%, #002661 100%);
+    color: whitesmoke;
+    border-radius: 10px;
+  }
+  .yet-user-main-description-main {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .three {
+     color: chartreuse;
+     margin-left: 10px;
+   }
+  .yet-user-main-description-main-contents {
+    display: flex;
+    margin: 5px auto;
+    font-size: 1.1rem;
+  }
+  .capital {
+    font-size: 1.1rem;
+    color: chartreuse;
+    margin-right: 3px;
+  }
+  .yet-user-main-description-main-title {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    margin-right: 30px;
+  }
+  .yet-user-main-description-main-content {
+    width: 270px;
+  }
+  .yet-user-allow {
+    display: none;
+  }
+  .yet-user-main-image {
+    display: none;
+    height: 400px;
+  }
+  /* アプリの詳細 */
+  .yet-user-detail {
+    width: 100vw;
+    margin: auto;
+  }
+  .yet-user-detail-title {
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .yet-user-detail-user {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 90%;
+    height: 200px;
+    border-radius: 50px;
+    background-color: ghostwhite;
+    overflow: auto;
+  }
+  .yet-user-detail-user-content {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid rgb(219, 227, 236);
+    overflow: auto;
+  }
+  .yet-user-detail-user-content-image {
+    display: none;
+  }
+  .content-title {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 10px 0px;
+  }
+  .content {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .yet-user-detail-contents {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .yet-user-detail-content-title {
+    font-size: 1.5rem;
+  }
+  .yet-user-detail-content {
+    display: inline-block;
+    padding: 20px 10px;
+    height: 600px;
+    width: 80%;
+    margin-top: 10px;
+    border: 1px solid rgb(194, 193, 193);
+    border-radius: 50px;
+    background-color: ghostwhite;
+  }
+  .yet-user-log-new {
+    display: inline-block;
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    color: red;
+    background-color: rgb(224, 209, 209);
+    border: 1px solid red;
+    box-shadow: 5px 5px 6px 0px #00000082;
+    transition: 0.5s;
+  }
+  .yet-user-log-new:hover {
+    color: red;
+    box-shadow: none;
+  }
 }

@@ -256,3 +256,265 @@
   margin: 100px 0px 40px 0px;
   text-align: center;
 }
+
+/* スマホ表示時 */
+@media (max-width: 599px) {
+  /* ユーザーの新規登録とログイン関係のCSS */
+  /* registrations/new.html.erb */
+  .registration-main {
+    display: block;
+    width: 90%;
+  }
+  .new-user-title {
+    margin: 40px 0px 10px 0px;
+    text-align: center;
+  }
+  .field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .field-password {
+    margin: 0px auto 20px;
+    position: relative;
+  }
+  .input-default {
+    width: calc(100% - 32px);
+    margin-top: 5px;
+    height: 30px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 20px;
+    resize: none;
+  }
+  .eye-btn {
+    position:absolute;
+    top:50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .file-field {
+    margin: 40px auto 20px;
+  }
+  .file-default {
+    border: none;
+  }
+  .actions {
+    text-align: center;
+    margin-top: 25px;
+  }
+  .button {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(63, 63, 63);
+    color: #ffffff;
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: 2px 2px 5px #000000bf;
+  }
+  .button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: none;
+  }
+  /* sessions/new.html.erb */
+  .login-user-title {
+    margin: 40px 0px 40px 0px;
+    text-align: center;
+  }
+  .login-form {
+    width: 90%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .session-main {
+    width: 100%;
+  }
+  .link {
+    margin-top: 25px;
+    text-align: center;
+  }
+  /* その他のSNSでのログイン */
+  .other-session {
+    width: 100%;
+    height: 200px;
+  }
+  .other-session-title {
+    margin-top: 20px;
+    padding: 20px 0px;
+    height: 40px;
+    font-size: 1.5rem;
+    border-top: 1px solid black;
+    text-align: center;
+  }
+  .other-session-index {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .sns-session-btn {
+    padding: 5px 0;
+    height: 30px;
+    width: 120px;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    text-align: center;
+    box-shadow: 2px 2px 5px #000000bf;
+    transition: 0.5s;
+  }
+  .sns-session-btn:hover {
+    background-color: rgb(63, 63, 63);
+  }
+  /* ユーザー新規登録選択画面 users/new */
+  .user-new-title {
+    padding-top: 30px;
+    height: 70px;
+    min-height: 70px;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    overflow: scroll;
+  }
+  .user-new-index {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: 80%;
+    height: 80%;
+    min-height: 350px;
+  }
+  .user-new-btn {
+    min-height: 80px;
+    margin: 0px auto;
+    width: 80%;
+    text-align: center;
+  }
+  .user-new-btn-pass {
+    display: inline-block;
+    padding-top: 15px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.5rem;
+    color: #ccc;
+    background-color: rgb(63, 63, 63);
+  }
+  .user-new-btn-pass:hover {
+    display: inline-block;
+    padding-top: 15px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.5rem;
+    color: black;
+    background-color: rgb(190, 189, 189);
+    box-shadow: 0 0 10px black;
+  }
+  .google-new-btn-pass {
+    display: inline-block;
+    padding-top: 15px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.5rem;
+    color: rgb(87, 147, 236);
+    background-color: rgb(235, 229, 229);
+    border: 1px solid lightgrey;
+  }
+  .google-new-btn-pass:hover {
+    display: inline-block;
+    padding-top: 15px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.5rem;
+    color: rgb(87, 147, 236);
+    background-color: rgb(235, 235, 235);
+    box-shadow: 0 0 10px black;
+  }
+  .facebook-new-btn-pass {
+    display: inline-block;
+    padding-top: 15px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: rgb(12, 138, 196);
+  }
+  .facebook-new-btn-pass:hover {
+    display: inline-block;
+    padding-top: 15px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.5rem;
+    color: black;
+    background-color: rgb(190, 189, 189);
+    box-shadow: 0 0 10px black;
+  }
+
+  /* ユーザーのマイページに関するCSS */
+  .mypage {
+    width: 70%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+  }
+  .mypage-title {
+    font-size: 2rem;
+    padding-bottom: 30px;
+  }
+  .user-infomaition {
+    width: 100%;
+    border: 1px solid black;
+    overflow: scroll;
+    margin-bottom: 50px;
+  }
+  .user-show-index {
+    display: flex;
+    align-items: center;
+  }
+  .user-show-index-title {
+    min-width: 180px;
+    padding-left: 20px;
+  }
+  .user-show-content {
+    border-left: 1px solid black;
+    padding: 10px;
+  }
+  .user-show-edit {
+    text-align: center;
+  }
+  .user-show-btn {
+    display: inline-block;
+    padding-top: 10px;
+    height: 50px;
+    width: 300px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(116, 116, 116);
+    transition: 1s;
+  }
+  .user-show-btn:hover {
+    display: inline-block;
+    padding-top: 10px;
+    height: 50px;
+    width: 300px;
+    font-size: 1.5rem;
+    color: black;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.459);
+  }
+  /* ユーザー情報編集画面 */
+  .edit-actions {
+    padding-top: 30px;
+    text-align: center;
+  }
+  .edit-show-title {
+    margin: 100px 0px 40px 0px;
+    text-align: center;
+  }
+}

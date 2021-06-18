@@ -46,3 +46,10 @@
 label {
   margin: 10px 17px 10px 3px;
 }
+
+/* スマホ表示時 */
+@media (max-width: 599px) {
+  #index-window {
+    display: none;
+  }
+}

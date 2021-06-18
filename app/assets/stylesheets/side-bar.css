@@ -93,3 +93,105 @@
   background-color: rgb(201, 212, 194);
   color: black;
 }
+
+/* スマホ表示時 */
+@media (max-width: 599px) {
+  .side-bar-content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: calc(100vh - 110px);
+    width: 190px;
+    background-color: whitesmoke;
+    margin: 5px auto;
+    border-radius : 10px;
+    overflow: scroll;
+  }
+  /* ユーザーの情報 */
+  .user-menu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    min-height: 160px;
+    width: 160px;
+    background-color: white;
+    border-radius : 50px;
+  }
+  .user-icon {
+    text-align: center;
+  }
+  .user-image {
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 50px;
+  }
+  .user-show-path{
+    text-align: center;
+  }
+  /* グループの情報 */
+  .group-menu {
+    width: 180px;
+    background-color: rgb(218, 255, 131);
+    border-radius : 10px;
+  }
+  .group-new-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    height: 50px;
+    width: 150px;
+    border-bottom: 1px solid black;
+  }
+  .group-index {
+    margin: 10px auto;
+    height: calc(100vh - 400px);
+    min-height: 300px;
+    width: 170px;
+    background-color: rgb(216, 190, 141);
+    border-radius : 5px;
+    overflow: scroll;
+  }
+  .group-index-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+  .group-index-menu {
+    height: 400px;
+  }
+  .group-index-content {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .group-index-content:hover {
+    text-align: center;
+  }
+  .group-index-content-link {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    padding-top: 10px;
+    height: 30px;
+    width: 150px;
+    border-bottom: 1px solid white;
+    color: white;
+    transition: 1s;
+  }
+  .group-index-content-link:hover {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    padding-top: 10px;
+    height: 30px;
+    width: 150px;
+    border-bottom: 1px solid white;
+    background-color: rgb(201, 212, 194);
+    color: black;
+  }
+  #index-side-content {
+    width: 90%;
+  }
+}
