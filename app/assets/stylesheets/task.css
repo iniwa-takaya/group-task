@@ -132,14 +132,16 @@
   margin-left: 10px;
 }
 .task-new-form-submit {
-  width: 50px;
-  color: black;
+  width: 100px;
+  height: 30px;
+  background-color: gray;
+  color: aliceblue;
   cursor: pointer;
   transition: 0.5s;
 }
 .task-new-form-submit:hover {
   color: white;
-  background-color: gray;
+  background-color: black;
 }
 
 /* スマホ表示時 */
