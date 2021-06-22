@@ -70,13 +70,19 @@ https://group-tasks-128.herokuapp.com/
   - 画像ファイルを選択することで、ユーザーアイコンを作成する事ができる
   - 画像ファイルを選択した際に、プレビューが表示される
   - GoogleとFacebookを使用して新規登録、ログインができ、その際はパスワードを省略する事ができる
+  - パスワードを表示・非表示で切り替える事ができる
   #### 現状の問題点
   - 架空のメールアドレスでも登録することができる
   - チームIDが同じであれば、誰でもタスクを削除できる
+  <br>
+  [![Image from Gyazo](https://i.gyazo.com/7494c64c4dedd4f955132204ffb05333.gif)](https://gyazo.com/7494c64c4dedd4f955132204ffb05333)
+  <br>
+  [![Image from Gyazo](https://i.gyazo.com/980fabe46513d639c676ec51dc605a2b.gif)](https://gyazo.com/980fabe46513d639c676ec51dc605a2b)
+  
 
 - ### グループ管理機能
   #### 概要
-  - ユーザーがいくつものチームを作成、管理機能
+  - ユーザーがいくつものチームを作成、管理できる機能
   #### 詳細
   - グループを、チーム名と、チームメンバーの情報があれば作成できる
   - グループ名がない時、エラーが表示される
@@ -85,6 +91,8 @@ https://group-tasks-128.herokuapp.com/
   - チームメンバーは、作成者以外でもチームの情報を編集、削除できる
   #### 現状の問題点
   - チームIDが同じであれば、誰でも参加できるため、情報の秘匿性がない
+  <br>
+  [![Image from Gyazo](https://i.gyazo.com/e86b3e07d7bbedcb85493a7ba54930ac.gif)](https://gyazo.com/e86b3e07d7bbedcb85493a7ba54930ac)
 
 - ### スペース管理機能
   #### 概要
@@ -95,6 +103,8 @@ https://group-tasks-128.herokuapp.com/
   - 必要であれば、作業スペースの詳細を作成できる
   - チームメンバーは、作業スペースを作成する事ができる
   - チームメンバーは、作成者以外でも作業スペースの情報を編集、削除できる
+  <br>  
+  [![Image from Gyazo](https://i.gyazo.com/b9651f94d782d78051cd6e65fb073261.gif)](https://gyazo.com/b9651f94d782d78051cd6e65fb073261)
 
 - ### タスク管理機能
   #### 概要
@@ -105,6 +115,8 @@ https://group-tasks-128.herokuapp.com/
   - 必要であれば、期限を作成できる
   - チームメンバーであれば、未完了のタスクに限り編集できる
   - タスクは、未完了と完了で表示を切り替える事ができ、完了済みの場合だけ削除ができる
+  <br>  
+  [![Image from Gyazo](https://i.gyazo.com/023d3036ce717f75b076542679162ef2.gif)](https://gyazo.com/023d3036ce717f75b076542679162ef2)
 
 ## 実装予定の機能
 
