@@ -22,7 +22,8 @@
 
         <div class="field-title">このチームに参加するメンバー</div>
         <div class="task-group-member-field">
-          <%= f.collection_check_boxes :user_ids, User.where(group_number: current_user.group_number), :id, :nick_name, class: "task-group-member" %>
+          <%= f.collection_check_boxes :user_ids, User.where(group_number: current_user.group_number).where.not(id: current_user.id), :id, :nick_name, class: "task-group-member" %>
+          <input name="task_group[user_ids][]" type="hidden" value=<%= current_user.id %>>
         </div>
 
         <div class="actions">

@@ -10,17 +10,18 @@
         
         <div class="field-title">チームの名前</div>
         <div class="field-form-name">
-          <%= f.text_field :g_name, placeholder: 'グループ名を入力してください', class:"field-default" %>
+          <%= f.text_field :g_name, placeholder: 'チーム名を入力してください', class:"field-default" %>
         </div>
         
         <div class="field-title">チームの説明</div>
         <div class="field-form-description">
-          <%= f.text_area :g_description, placeholder: 'グループの説明を入力してください', class:"field-description" %>
+          <%= f.text_area :g_description, placeholder: 'チームの説明を入力してください', class:"field-description" %>
         </div>
 
         <div class="field-title">このチームに参加するメンバー</div>
         <div class="task-group-member-field">
-          <%= f.collection_check_boxes :user_ids, User.where(group_number: current_user.group_number), :id, :nick_name, class: "task-group-member" %>
+          <%= f.collection_check_boxes :user_ids, User.where(group_number: current_user.group_number).where.not(id: current_user.id), :id, :nick_name, class: "task-group-member" %>
+          <input name="task_group[user_ids][]" type="hidden" value=<%= current_user.id %>>
         </div>
 
         <div class="actions">
