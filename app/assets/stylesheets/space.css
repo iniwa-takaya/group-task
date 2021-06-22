@@ -1,7 +1,5 @@
 /* グループに関する情報 */
 .group-info {
-  height: calc(100vh - 100px - 60%);
-  min-height: 300px;
   text-align: center;
   width: 100%;
 }
@@ -42,17 +40,18 @@
 }
 .group-info-member {
   margin: 0 auto;
-  min-height: 150px;
   width: 90%;
   border: 3px solid lightgray;
   border-radius: 5px;
   overflow: scroll;
 }
 .group-member-title {
-  width: 100%;
+  list-style: none;
+  width: 90%;
   margin: 0 auto;
   padding: 5px 0px;
-  border-bottom: 5px double lightgray;
+  border: 1px solid lightgray;
+  cursor: pointer;
 }
 .member-name {
   display: inline-flex;
@@ -64,14 +63,13 @@
 /* グループ内で作成したスペース一覧 */
 .space-index {
   height: calc(100vh - 100px - 70%);
-  min-height: 150px;
   width:  80%;
   padding: 0px 200px;
   text-align: center;
   overflow: scroll;
 }
 .space-index-title {
-  margin: 5px 0 0 0;
+  margin: 10px 0 0 0;
   font-size: 20px;
 }
 .space-name {
@@ -103,7 +101,7 @@
 .space-new {
   margin: 0 auto;
   height: calc(100vh - 100px - 60%);
-  min-height: 250px;
+  min-height: 200px;
   width: 90%;
   text-align: center;
   border: 3px solid lightgray;

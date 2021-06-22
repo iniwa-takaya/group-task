@@ -20,19 +20,21 @@
         <%= link_to '削除する', task_group_path(@task_group), method: :delete,
             data: { confirm: 'チームを削除すると、関連する作業スペースとタスクも削除されます' }, class: "group-info-path" %>
       </div>
-      <div class="group-info-member">
-        <div class="group-member-title">メンバー</div>
-        <% @task_group.users.order("nick_name").each do |users| %>
-          <div class="member-name">
-            <% if users.image.attached? %>
-              <%= image_tag users.image.variant(resize: '30x30'), class: 'user-image' %>
-            <% else %>
-              <%= image_tag 'no-image.jpg', size: '30x30', class: 'user-image' %>
-            <% end %>
-            <%= users.nick_name %>
-          </div>
-        <% end %>
-      </div>
+      <details>
+        <summary class="group-member-title">メンバーを確認する</summary>
+        <div class="group-info-member">
+          <% @task_group.users.order("nick_name").each do |users| %>
+            <div class="member-name">
+              <% if users.image.attached? %>
+                <%= image_tag users.image.variant(resize: '30x30'), class: 'user-image' %>
+              <% else %>
+                <%= image_tag 'no-image.jpg', size: '30x30', class: 'user-image' %>
+              <% end %>
+              <%= users.nick_name %>
+            </div>
+          <% end %>
+        </div>
+      </details>
     </div>
     <%# グループ内で作成したスペースの表示 %>
     <div class="space-index">
