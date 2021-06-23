@@ -30,13 +30,17 @@ a:hover {
   font-size: 30px;
 }
 .log-menu {
+  margin-right: 10px;
+  padding: 0px 5px;
   display: flex;
   align-items: center;
   height: 40px;
-  margin-right: 10px;
-  padding: 0px 5px;
   border-left: 1px solid ghostwhite;
   border-right: 1px solid ghostwhite;
+}
+.guest-log-menu-content {
+  color: ghostwhite;
+  border-bottom: 1px solid ghostwhite;
 }
 .log-menu-content {
   color: ghostwhite;

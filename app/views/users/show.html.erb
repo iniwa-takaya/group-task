@@ -3,6 +3,7 @@
     <%= render 'shared/side_bar' %>
   </div>
   <div class="main-window">
+
     <div class="mypage">
       <div class="mypage-title"><%= "#{current_user.nick_name}さんのマイページ" %></div>
       <div class="user-infomaition">
@@ -29,6 +30,11 @@
           <div class="user-show-content"><%= current_user.group_number %></div>
         </div>
       </div>
+      
+      <div class='login-flash-message'>
+        <%= flash[:notice] %>
+      </div>
+
       <div class="user-show-edit">
         <%= link_to 'ユーザー情報を編集する', edit_user_path(current_user), class: "user-show-btn" %>
       </div>

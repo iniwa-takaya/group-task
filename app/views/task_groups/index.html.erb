@@ -4,6 +4,10 @@
       <%= render 'shared/side_bar' %>
     </div>
     <div class="main-window" id="index-window">
+      <div class='guest-flash-message'>
+        <%= flash[:notice] %>
+      </div>
+
       <div class="yet-user-detail-title">~ チームを作成しよう ~</div>
       <div class="yet-user-detail-contents">
         <div class="yet-user-detail-content">

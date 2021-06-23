@@ -6,6 +6,9 @@ class UsersController < ApplicationController
   end
 
   def edit
+    if current_user.email == "guest@example.com"
+      redirect_to user_path(current_user), notice: 'ゲストユーザーはユーザー情報を編集できません。'
+    end
   end
 
   def update

@@ -5,7 +5,8 @@
   <% if user_signed_in? %>
     <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "log-menu-content" %>
   <% else %>
-    <%= link_to 'ログイン', new_user_session_path, class: "log-menu-content" %>
+    <%= link_to 'ゲストユーザーとしてログイン', users_guest_sign_in_path, method: :post, class: "guest-log-menu-content" %>
+    <%= link_to 'ログイン', new_user_session_path, class: "log-menu-content-new" %>
     <%= link_to '新規ユーザー登録', new_user_path, class: "log-menu-content-new" %>
   <% end %>
 </div>
