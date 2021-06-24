@@ -75,8 +75,10 @@ https://group-tasks-128.herokuapp.com/
   - 架空のメールアドレスでも登録することができる
   - チームIDが同じであれば、誰でもタスクを削除できる
   <br>
+
   [![Image from Gyazo](https://i.gyazo.com/7494c64c4dedd4f955132204ffb05333.gif)](https://gyazo.com/7494c64c4dedd4f955132204ffb05333)
   <br>
+
   [![Image from Gyazo](https://i.gyazo.com/980fabe46513d639c676ec51dc605a2b.gif)](https://gyazo.com/980fabe46513d639c676ec51dc605a2b)
   
 
@@ -92,6 +94,7 @@ https://group-tasks-128.herokuapp.com/
   #### 現状の問題点
   - チームIDが同じであれば、誰でも参加できるため、情報の秘匿性がない
   <br>
+
   [![Image from Gyazo](https://i.gyazo.com/e86b3e07d7bbedcb85493a7ba54930ac.gif)](https://gyazo.com/e86b3e07d7bbedcb85493a7ba54930ac)
 
 - ### スペース管理機能
@@ -104,6 +107,7 @@ https://group-tasks-128.herokuapp.com/
   - チームメンバーは、作業スペースを作成する事ができる
   - チームメンバーは、作成者以外でも作業スペースの情報を編集、削除できる
   <br>  
+  
   [![Image from Gyazo](https://i.gyazo.com/b9651f94d782d78051cd6e65fb073261.gif)](https://gyazo.com/b9651f94d782d78051cd6e65fb073261)
 
 - ### タスク管理機能
@@ -116,6 +120,7 @@ https://group-tasks-128.herokuapp.com/
   - チームメンバーであれば、未完了のタスクに限り編集できる
   - タスクは、未完了と完了で表示を切り替える事ができ、完了済みの場合だけ削除ができる
   <br>  
+
   [![Image from Gyazo](https://i.gyazo.com/023d3036ce717f75b076542679162ef2.gif)](https://gyazo.com/023d3036ce717f75b076542679162ef2)
 
 ## 実装予定の機能
@@ -210,3 +215,16 @@ https://group-tasks-128.herokuapp.com/
 - 環境
   - ruby 2.6.5
   - ruby on rails 6.0.0
+  - html5
+  - css3
+- コマンド内容
+
+```
+  % git clone https://github.com/we-b/group-task.git
+  % cd my-portfolio
+  % bundle install
+  % yarn install
+  % rails db:create
+  % rails db:migrate
+  % rails s
+```
